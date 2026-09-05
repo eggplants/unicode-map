@@ -2,8 +2,45 @@
 # https://github.com/voidzero-dev/vite-plus/issues/943
 vite-plus = "https://github.com/markmals/mise-vite-plus"
 
+[settings.github]
+use_git_credentials = true
+
 [tools]
+"aqua:git-lfs/git-lfs" = "latest"
 claude = "latest"
+gh = "latest"
+ghalint = "latest"
 pinact = "latest"
+rg = "latest"
 usage = "latest"
 vite-plus = "latest"
+
+[tasks.dev]
+run = "vp dev"
+
+[tasks.build]
+run = "vpr build"
+
+[tasks.watch]
+run = "vpr watch"
+
+[tasks.test]
+run = "vp test"
+
+[tasks.ghalint]
+run = "ghalint run"
+
+[tasks.vp-check-fix]
+run = "vp check --fix"
+
+[tasks.pin]
+depends = ["pinact"]
+
+[tasks.pinact]
+run = "pinact run -u -min-age 7"
+
+[tasks.pre-commit]
+depends = ["ghalint", "vp-check-fix", "test"]
+
+[tasks.pre-push]
+depends = []

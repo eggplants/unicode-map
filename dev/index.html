@@ -38,6 +38,12 @@
         height: auto;
         background: #fff;
       }
+      #status {
+        padding: 1rem;
+        border: 1px dashed color-mix(in srgb, CanvasText 40%, transparent);
+        border-radius: 0.5rem;
+        line-height: 1.6;
+      }
       p.hint {
         margin: 0;
         color: color-mix(in srgb, CanvasText 60%, transparent);
@@ -56,12 +62,31 @@
         page.
       </p>
     </header>
-    <main><img id="chart" alt="Code point chart" /></main>
+    <main>
+      <p id="status" hidden>
+        <code id="status-file"></code> has not been built yet. Run <code>vp run build</code> (or
+        <code>vp run watch</code>) first; this page reloads by itself once the build succeeds.
+      </p>
+      <img id="chart" alt="Code point chart" hidden />
+    </main>
     <script type="module">
       const name = new URLSearchParams(location.search).get('chart') ?? 'bmp-1';
+      const chart = document.getElementById('chart');
+      const status = document.getElementById('status');
+      const file = `${name}-chart.svg`;
+
+      document.getElementById('status-file').textContent = file;
+      chart.addEventListener('load', () => {
+        chart.hidden = false;
+        status.hidden = true;
+      });
+      chart.addEventListener('error', () => {
+        chart.hidden = true;
+        status.hidden = false;
+      });
 
       // The chart is regenerated in place, so bust the cache on every load.
-      document.getElementById('chart').src = `/${name}-chart.svg?t=${Date.now()}`;
+      chart.src = `/${file}?t=${Date.now()}`;
 
       for (const button of document.querySelectorAll('[data-chart]')) {
         button.ariaCurrent = String(button.dataset.chart === name);
