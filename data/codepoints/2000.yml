@@ -55,7 +55,7 @@
     box: true
 
   2063:
-    font: doulos
+    font: noto-serif
     codepoint: 0x2C
     transform: translate(0, -0.2)
     box: true
@@ -82,7 +82,7 @@
 # Superscripts and Subscripts
 
 2070..209F:
-  font: doulos
+  font: noto-serif
   transform: scale(0.95) translate(0, -0.05)
 
   2072..2073: notdef
@@ -100,15 +100,13 @@
     transform: scale(0.7)
 
   20BA..20BD:
-    font: doulos
+    font: noto-serif
 
   20BE:
     font: symbola
 
   20BF:
-    font: btc
-    codepoint: 0x42
-    transform: scale(0.8)
+    font: notoSerif
 
   20C0..20CF: notdef
 

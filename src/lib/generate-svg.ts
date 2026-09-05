@@ -21,6 +21,12 @@ const CUSTOM_GLYPH_EM = 2048;
 const CONTROL_TEXT_SIZE = 768;
 const ANCHOR_SIZE = 2;
 
+/**
+ * opentype.js flips the outline vertically by default, but `getPath` already
+ * returns it in SVG orientation, so flipping again renders glyphs upside down.
+ */
+const PATH_DATA = { flipY: false };
+
 type GlyphInfo = { name: string; font: Font; glyph: Glyph };
 
 const loadFonts = async (): Promise<Record<string, Font>> => {
@@ -29,7 +35,13 @@ const loadFonts = async (): Promise<Record<string, Font>> => {
       .filter(([, definition]) => definition.path !== undefined)
       .map(async ([name, definition]) => {
         const file = await fs.readFile(fromRoot('fonts', definition.path!));
-        return [name, opentype.parse(file)] as const;
+        const font = opentype.parse(file);
+
+        if (definition.variation !== undefined) {
+          font.variation.set(definition.variation);
+        }
+
+        return [name, font] as const;
       }),
   );
 
@@ -168,7 +180,9 @@ const generateSvg = async (
       const lines = codepointInfo.shortName.split('\\n');
 
       for (const [lineIndex, line] of lines.entries()) {
-        const textPath = textFont.getPath(line, 1024, 1024, CONTROL_TEXT_SIZE).toPathData();
+        const textPath = textFont
+          .getPath(line, 1024, 1024, CONTROL_TEXT_SIZE)
+          .toPathData(PATH_DATA);
         const text = paper.path(textPath);
         const textWidth = textFont
           .stringToGlyphs(line)
@@ -232,7 +246,7 @@ const generateSvg = async (
         const width = (glyphInfo.glyph.advanceWidth / glyphInfo.font.unitsPerEm) * BLOCK_SIZE;
         const glyphPath = glyphInfo.glyph
           .getPath((BLOCK_SIZE - width) / 2, 25, BLOCK_SIZE)
-          .toPathData();
+          .toPathData(PATH_DATA);
         const glyphElement = paper.path(glyphPath);
 
         const fontCountName = glyphInfo.name.startsWith('noto')

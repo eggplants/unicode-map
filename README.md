@@ -47,7 +47,7 @@ This project is built with [Vite+](https://viteplus.dev/) on pnpm. Install the `
     vp exec playwright install chromium
     vp run build
 
-**WARN: This command will download almost 1GB of the font data from the internet, and cache them into `fonts` subdirectory.**
+**WARN: This command will download around 550MB of the font data from the internet, and cache them into `fonts` subdirectory.**
 
 `vp check` formats, lints and type checks the sources, and `vp test` runs the unit tests.
 
@@ -138,9 +138,9 @@ The files not in the `data/glyphs` subdirectory are also licensed under [MIT Lic
 	* license: CC0 1.0
 	* for: u0de6.svg .. u0def.svg
 * Open Sans
-	* link: http://www.opensans.com/
+	* link: https://fonts.google.com/specimen/Open+Sans
 	* author: Steve Matteson and Google Corporation
-	* license: Apache License v2
+	* license: SIL OFL 1.1
 	* for: Control characters
 * Linux Libertine
 	* link: http://www.linuxlibertine.org/

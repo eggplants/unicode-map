@@ -80,65 +80,65 @@ AA00..AA5F:
 # Myanmar Extended-B
 
 AA60..AA7F:
-  font: padauk
+  font: noto-myanmar
   transform: scale(0.65) translate(0, -0.1)
 
   AA7B:
-    font: padauk
+    font: noto-myanmar
     combining: true
     transform: scale(0.65) translate(0.3, -0.1)
 
   AA7C:
-    font: padauk
+    font: noto-myanmar
     combining: true
     transform: scale(0.65) translate(0.25, -0.1)
 
   AA7D:
-    font: padauk
+    font: noto-myanmar
     combining: true
     transform: scale(0.65) translate(0.5, -0.05)
 
 # Tai Viet
 
 AA80..AADF:
-  font: tai-heritage
+  font: noto-tai-viet
   transform: scale(0.5) translate(-0.1, 0)
 
   AA8B:
-    font: tai-heritage
+    font: noto-tai-viet
     transform: scale(0.5) translate(-0.1, -0.2)
 
   AAAF:
-    font: tai-heritage
+    font: noto-tai-viet
     transform: scale(0.5) translate(-0.1, -0.2)
 
   AAB0:
-    font: tai-heritage
+    font: noto-tai-viet
     combining: true
     transform: scale(0.5) translate(0.1, 0.1)
 
   AAB2..AAB3:
-    font: tai-heritage
+    font: noto-tai-viet
     combining: true
     transform: scale(0.5) translate(0.1, 0.1)
 
   AAB4:
-    font: tai-heritage
+    font: noto-tai-viet
     combining: true
     transform: scale(0.5) translate(0.3, 0)
 
   AAB7..AAB8:
-    font: tai-heritage
+    font: noto-tai-viet
     combining: true
     transform: scale(0.5) translate(0.1, 0.1)
 
   AABE..AABF:
-    font: tai-heritage
+    font: noto-tai-viet
     combining: true
     transform: scale(0.5) translate(0.1, 0.1)
 
   AAC1:
-    font: tai-heritage
+    font: noto-tai-viet
     combining: true
     transform: scale(0.5) translate(0.1, 0.3)
 
@@ -191,7 +191,7 @@ AAE0..AAFF:
 # Ethiopic Extended-A
 
 AB00..AB2F:
-  font: abyssinica
+  font: noto-ethiopic
   transform: scale(0.8)
 
   AB00: notdef

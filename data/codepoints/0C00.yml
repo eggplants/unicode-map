@@ -336,11 +336,11 @@
   0D50..0D53: notdef
 
   0D54: # TODO: find more neat serif font
-    font: manjari
+    font: noto-malayalam
     transform: scale(0.7) scale(-1, 1)
 
   0D55..0D56:
-    font: manjari
+    font: noto-malayalam
     transform: scale(0.7)
 
   0D57:
@@ -349,15 +349,15 @@
     transform: scale(0.5, 0.8) translate(0.6, -0.1)
 
   0D58..0D5C:
-    font: manjari
+    font: noto-malayalam
     transform: scale(0.7)
 
   0D5D:
-    font: manjari
+    font: noto-malayalam
     transform: scale(0.45, 0.7)
 
   0D5E..0D5F:
-    font: manjari
+    font: noto-malayalam
     transform: scale(0.7)
 
   0D62..0D63:
@@ -368,15 +368,15 @@
   0D64..0D65: notdef
 
   0D76:
-    font: manjari
+    font: noto-malayalam
     transform: scale(0.7)
 
   0D77:
-    font: manjari
+    font: noto-malayalam
     transform: scale(0.6, 0.7)
 
   0D78:
-    font: manjari
+    font: noto-malayalam
     transform: scale(0.5, 0.7)
 
 # Sinhala

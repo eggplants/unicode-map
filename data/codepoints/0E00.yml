@@ -1,49 +1,49 @@
 # Thai
 
 0E00..0E7F:
-  font: norasi
+  font: noto-thai
   transform: scale(0.8) translate(0, -0.05)
 
   0E00: notdef
 
   0E31:
-    font: norasi
+    font: noto-thai
     combining: true
     transform: scale(0.8) translate(0.4, 0.1)
 
   0E34..0E37:
-    font: norasi
+    font: noto-thai
     combining: true
     transform: scale(0.8) translate(0.3, 0)
 
   0E38..0E3A:
-    font: norasi
+    font: noto-thai
     combining: true
     transform: scale(0.8) translate(0.3, -0.1)
 
   0E3B..0E3E: notdef
 
   0E42..0E44:
-    font: norasi
+    font: noto-thai
     transform: scale(0.8) translate(0, 0.15)
 
   0E47:
-    font: norasi
+    font: noto-thai
     combining: true
     transform: scale(0.8) translate(0.3, 0.05)
 
   0E48..0E4C:
-    font: norasi
+    font: noto-thai
     combining: true
     transform: scale(0.8) translate(0.3, 0.4)
 
   0E4D..0E4E:
-    font: norasi
+    font: noto-thai
     combining: true
     transform: scale(0.8) translate(0.4, 0.1)
 
   0E5B:
-    font: norasi
+    font: noto-thai
     transform: scale(0.7, 0.8) translate(-0.05, -0.05)
 
   0E5C..0E7F: notdef
@@ -188,15 +188,15 @@
   0EE0..0EFF: notdef
 
 0F00..0FFF:
-  font: jomolhari
+  font: noto-tibetan
   transform: scale(0.8) translate(0, 0.15)
 
   0F00..0F03:
-    font: jomolhari
+    font: noto-tibetan
     transform: scale(0.8) translate(0, 0.25)
 
   0F08:
-    font: jomolhari
+    font: noto-tibetan
     transform: scale(0.8) translate(0, -0.1)
 
   0F0B: # TODO: Draw glyph
@@ -204,15 +204,15 @@
     box: true
 
   0F12:
-    font: jomolhari
+    font: noto-tibetan
     transform: scale(0.8) translate(0, -0.1)
 
   0F15..0F16:
-    font: jomolhari
+    font: noto-tibetan
     transform: scale(0.8)
 
   0F18:
-    font: jomolhari
+    font: noto-tibetan
     combining: true
     transform: scale(0.8) translate(0.3, -0.15)
 
@@ -227,7 +227,7 @@
     transform: scale(0.8) translate(0.25, -0.15)
 
   0F36:
-    font: jomolhari
+    font: noto-tibetan
     transform: scale(0.8) translate(0, 0.05)
 
   0F37:
@@ -236,12 +236,12 @@
     transform: scale(0.8) translate(0.15, -0.15)
 
   0F39:
-    font: jomolhari
+    font: noto-tibetan
     combining: true
     transform: scale(0.8) translate(0.3, 0.2)
 
   0F3C..0F3D:
-    font: jomolhari
+    font: noto-tibetan
     transform: scale(0.7) translate(0, 0.25)
 
   0F3E:
@@ -263,12 +263,12 @@
   0F6D..0F70: notdef
 
   0F71:
-    font: jomolhari
+    font: noto-tibetan
     combining: true
     transform: scale(0.8) translate(0.15, -0.1)
 
   0F72:
-    font: jomolhari
+    font: noto-tibetan
     combining: true
     transform: scale(0.8) translate(0.2, 0.25)
 
@@ -277,7 +277,7 @@
     combining: true
 
   0F74..0F75:
-    font: jomolhari
+    font: noto-tibetan
     combining: true
     transform: scale(0.8) translate(0.15, -0.1)
 
@@ -286,17 +286,17 @@
     combining: true
 
   0F7A..0F7E:
-    font: jomolhari
+    font: noto-tibetan
     combining: true
     transform: scale(0.8) translate(0.2, 0.25)
 
   0F7F:
-    font: jomolhari
+    font: noto-tibetan
     combining: true
     transform: scale(0.8) translate(0.3, 0.15)
 
   0F80:
-    font: jomolhari
+    font: noto-tibetan
     combining: true
     transform: scale(0.8) translate(0.2, 0.25)
 
@@ -305,12 +305,12 @@
     combining: true
 
   0F82..0F83:
-    font: jomolhari
+    font: noto-tibetan
     combining: true
     transform: scale(0.8) translate(0.2, 0.2)
 
   0F84:
-    font: jomolhari
+    font: noto-tibetan
     combining: true
     transform: scale(0.8) translate(0.2, 0.15)
 
@@ -329,52 +329,52 @@
     transform: scale(0.7) translate(0.35, 0.15)
 
   0F90..0FBC:
-    font: jomolhari
+    font: noto-tibetan
     combining: true
     transform: scale(0.8, 0.45) translate(0.2, 0.35)
 
     0F98: notdef
 
     0F99:
-      font: jomolhari
+      font: noto-tibetan
       combining: true
       transform: scale(0.8, 0.45) translate(0, 0.35)
 
     0FAD:
-      font: jomolhari
+      font: noto-tibetan
       combining: true
       transform: scale(0.8, 0.45) translate(0.2, 0.35)
 
     0FB5:
-      font: jomolhari
+      font: noto-tibetan
       combining: true
       transform: scale(0.8, 0.45) translate(0.4, 0.35)
 
   0FBD: notdef
 
   0FC3:
-    font: jomolhari
+    font: noto-tibetan
     transform: scale(0.8) translate(0, 0)
 
   0FC4:
-    font: jomolhari
+    font: noto-tibetan
     transform: scale(0.8) translate(0, -0.15)
 
   0FC5:
-    font: jomolhari
+    font: noto-tibetan
     transform: scale(0.8)
 
   0FC6:
-    font: jomolhari
+    font: noto-tibetan
     combining: true
     transform: scale(0.7) translate(0, 0.1)
 
   0FC8:
-    font: jomolhari
+    font: noto-tibetan
     transform: scale(0.8) translate(0, -0.15)
 
   0FC9..0FCC:
-    font: jomolhari
+    font: noto-tibetan
     transform: scale(0.8) translate(0, 0.05)
 
   0FCD: notdef
@@ -384,11 +384,11 @@
     transform: scale(0.8) translate(0, -0.1)
 
   0FD0:
-    font: jomolhari
+    font: noto-tibetan
     transform: scale(0.75) translate(0, 0.2)
 
   0FD1:
-    font: jomolhari
+    font: noto-tibetan
     transform: scale(0.8) translate(0, -0.1)
 
   0FD2..0FDA:

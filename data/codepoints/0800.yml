@@ -66,7 +66,7 @@
 # Arabic Extended-A
 
 08A0..08FF:
-  font: scheherazade
+  font: noto-arabic
   transform: translate(0, -0.2)
 
   08B5: notdef
@@ -88,7 +88,7 @@
 
   08D3: # Early mapping
     early: true
-    font: scheherazade
+    font: noto-arabic
     codepoint: 0x06E5
     combining: true
     transform: translate(0, 0.05)
@@ -137,178 +137,178 @@
     transform: scale(0.8)
 
   08E3:
-    font: scheherazade
+    font: noto-arabic
     combining: true
     transform: translate(0, -0.4)
 
   08E4..08E5:
-    font: scheherazade
+    font: noto-arabic
     combining: true
     transform: translate(-0.05, -0.05)
 
   08E6:
-    font: scheherazade
+    font: noto-arabic
     combining: true
     transform: translate(-0.1, -0.4)
 
   08E7..08E8:
-    font: scheherazade
+    font: noto-arabic
     combining: true
     transform: translate(-0.05, 0)
 
   08E9:
-    font: scheherazade
+    font: noto-arabic
     combining: true
     transform: translate(-0.1, -0.4)
 
   08EA..08EC:
-    font: scheherazade
+    font: noto-arabic
     combining: true
     transform: translate(-0.05, -0.05)
 
   08ED..08EF:
-    font: scheherazade
+    font: noto-arabic
     combining: true
     transform: translate(-0.05, -0.4)
 
   08F0..08F1:
-    font: scheherazade
+    font: noto-arabic
     combining: true
     transform: translate(-0.05, -0.05)
 
   08F2:
-    font: scheherazade
+    font: noto-arabic
     combining: true
     transform: translate(-0.05, -0.4)
 
   08F3..08F5:
-    font: scheherazade
+    font: noto-arabic
     combining: true
     transform: translate(-0.05, -0.05)
 
   08F6:
-    font: scheherazade
+    font: noto-arabic
     combining: true
     transform: translate(-0.05, -0.4)
 
   08F7..08F8:
-    font: scheherazade
+    font: noto-arabic
     combining: true
     transform: translate(-0.05, -0.05)
 
   08F9..08FA:
-    font: scheherazade
+    font: noto-arabic
     combining: true
     transform: translate(-0.05, -0.4)
 
   08FB..08FF:
-    font: scheherazade
+    font: noto-arabic
     combining: true
     transform: translate(-0.05, -0.05)
 
 # Devanagari
 
 0900..097F:
-  font: annapurna
+  font: noto-devanagari
   transform: scale(0.8)
 
   0900..0901:
-    font: annapurna
+    font: noto-devanagari
     combining: true
     transform: scale(0.8) translate(0.2, 0.1)
 
   0902:
-    font: annapurna
+    font: noto-devanagari
     combining: true
     transform: scale(0.8) translate(0.1, 0.1)
 
   0903:
-    font: annapurna
+    font: noto-devanagari
     combining: true
     transform: scale(0.8) translate(0.35, 0)
 
   093A:
-    font: annapurna
+    font: noto-devanagari
     combining: true
     transform: scale(0.8) translate(0.2, 0.1)
 
   093B:
-    font: annapurna
+    font: noto-devanagari
     combining: true
     transform: scale(0.8) translate(0.3, 0.1)
 
   093C:
-    font: annapurna
+    font: noto-devanagari
     combining: true
     transform: scale(0.8) translate(0.2, -0.1)
 
   093E:
-    font: annapurna
+    font: noto-devanagari
     combining: true
     transform: scale(0.8) translate(0.3, 0.1)
 
   093F:
-    font: annapurna
+    font: noto-devanagari
     combining: true
     transform: scale(0.8) translate(-0.3, 0.1)
 
   0940:
-    font: annapurna
+    font: noto-devanagari
     combining: true
     transform: scale(0.8) translate(0.3, 0.1)
 
   0941..0944:
-    font: annapurna
+    font: noto-devanagari
     combining: true
     transform: scale(0.8) translate(0.2, -0.1)
 
   0945..0948:
-    font: annapurna
+    font: noto-devanagari
     combining: true
     transform: scale(0.8) translate(0.2, 0.1)
 
   0949..094C:
-    font: annapurna
+    font: noto-devanagari
     combining: true
     transform: scale(0.8) translate(0.3, 0.1)
 
   094D:
-    font: annapurna
+    font: noto-devanagari
     combining: true
     transform: scale(0.8) translate(0.2, -0.1)
 
   094E:
-    font: annapurna
+    font: noto-devanagari
     combining: true
     transform: scale(0.8) translate(-0.3, 0.1)
 
   094F:
-    font: annapurna
+    font: noto-devanagari
     combining: true
     transform: scale(0.8) translate(0.3, 0.1)
 
   0951:
-    font: annapurna
+    font: noto-devanagari
     combining: true
     transform: scale(0.8) translate(0.15, 0.1)
 
   0952:
-    font: annapurna
+    font: noto-devanagari
     combining: true
     transform: scale(0.8) translate(0.25, -0.1)
 
   0953..0955:
-    font: annapurna
+    font: noto-devanagari
     combining: true
     transform: scale(0.8) translate(0.2, 0.1)
 
   0956..0957:
-    font: annapurna
+    font: noto-devanagari
     combining: true
     transform: scale(0.8) translate(0.2, -0.1)
 
   0962..0963:
-    font: annapurna
+    font: noto-devanagari
     combining: true
     transform: scale(0.8) translate(0.2, -0.1)
 

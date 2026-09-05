@@ -1,6 +1,14 @@
 declare module 'opentype.js' {
+  export type PathDataOptions = {
+    decimalPlaces?: number;
+    optimize?: boolean;
+    /** Defaults to `true`, which mirrors the outline about its bounding box. */
+    flipY?: boolean;
+    flipYBase?: number;
+  };
+
   export class Path {
-    toPathData(decimalPlaces?: number): string;
+    toPathData(options?: PathDataOptions | number): string;
   }
 
   export class Glyph {
@@ -9,8 +17,13 @@ declare module 'opentype.js' {
     getPath(x?: number, y?: number, fontSize?: number): Path;
   }
 
+  export type VariationManager = {
+    set(instance: number | Record<string, number>): void;
+  };
+
   export class Font {
     unitsPerEm: number;
+    variation: VariationManager;
     charToGlyph(character: string): Glyph;
     stringToGlyphs(text: string): Glyph[];
     getPath(text: string, x?: number, y?: number, fontSize?: number): Path;

@@ -8,79 +8,137 @@ import { fromRoot, log } from './util.ts';
 
 const FONTS_DIR = fromRoot('fonts');
 
-const fonts: Record<string, string> = {
+const NOTOFONTS = 'https://raw.githubusercontent.com/notofonts/notofonts.github.io/main/fonts';
+
+/** Per-script Noto families, published one static TTF per family. */
+const NOTO_FAMILIES = [
+  'NotoSansHebrew',
+  'NotoNaskhArabic',
+  'NotoSansSyriacEastern',
+  'NotoSansNKo',
+  'NotoSansSamaritan',
+  'NotoSansMandaic',
+  'NotoSerifBengali',
+  'NotoSerifGujarati',
+  'NotoSerifTamil',
+  'NotoSerifTelugu',
+  'NotoSerifKannada',
+  'NotoSerifMalayalam',
+  'NotoSerifLao',
+  'NotoSerifGeorgian',
+  'NotoSansCanadianAboriginal',
+  'NotoSansOgham',
+  'NotoSansRunic',
+  'NotoSansTagalog',
+  'NotoSansTagbanwa',
+  'NotoSerifKhmer',
+  'NotoSansTaiTham',
+  'NotoSansBalinese',
+  'NotoSansSundanese',
+  'NotoSansBatak',
+  'NotoSansOlChiki',
+  'NotoSerifDevanagari',
+  'NotoSerif',
+  'NotoSansTifinagh',
+  'NotoSansYi',
+  'NotoSansBamum',
+  'NotoSansSylotiNagri',
+  'NotoSansKayahLi',
+  'NotoSansRejang',
+  'NotoSansJavanese',
+  'NotoSansCham',
+  'NotoSansMeeteiMayek',
+  'NotoSerifEthiopic',
+  'NotoSansVai',
+  'NotoSerifMyanmar',
+  'NotoSansMongolian',
+  'NotoSansCoptic',
+  'NotoSerifThai',
+  'NotoSansSaurashtra',
+  'NotoSansNewTaiLue',
+  'NotoSansLepcha',
+  'NotoSansTaiViet',
+  'NotoSansLimbu',
+  'NotoSansPhagsPa',
+  'NotoSansLisu',
+];
+
+/**
+ * Each entry downloads into `fonts/<key>`. A list of sources is only supported
+ * for bare font files, which are stored side by side under that directory.
+ */
+const fonts: Record<string, string | string[]> = {
   Symbola: 'https://www.wfonts.com/download/data/2016/04/23/symbola/symbola.zip',
-  Noto: 'https://noto-website.storage.googleapis.com/pkgs/Noto-unhinted.zip',
+  Noto: [
+    ...NOTO_FAMILIES.map((family) => `${NOTOFONTS}/${family}/hinted/ttf/${family}-Regular.ttf`),
+    // Noto Sans Tibetan was retired upstream; the archive still carries it.
+    'https://raw.githubusercontent.com/notofonts/noto-fonts/main/archive/hinted/NotoSansTibetan/NotoSansTibetan-Regular.ttf',
+    // Noto Sans CJK JP, as Google Fonts publishes it.
+    'https://raw.githubusercontent.com/google/fonts/main/ofl/notosansjp/NotoSansJP%5Bwght%5D.ttf',
+  ],
   IPAexm: 'https://moji.or.jp/wp-content/ipafont/IPAexfont/ipaexm00401.zip',
   IPAmjm: 'https://dforest.watch.impress.co.jp/library/i/ipamjfont/10750/ipamjm00601.zip',
-  hanazono: 'http://jaist.dl.osdn.jp/hanazono-font/64385/hanazono-20160201.zip',
-  Doulos: 'https://software.sil.org/downloads/r/doulos/DoulosSIL-5.000.zip',
+  hanazono: 'https://glyphwiki.org/hanazono/hanazono-20170904.zip',
   FreeFont: 'https://ftp.gnu.org/gnu/freefont/freefont-ttf-20120503.zip',
   Hancom: 'http://cdn.hancom.com/pds/docs/HancomFont.zip',
   Scheherazade: 'http://software.sil.org/downloads/r/scheherazade/Scheherazade-2.100.zip',
-  Annapurna: 'http://software.sil.org/downloads/r/annapurna/AnnapurnaSIL-1.202.zip',
-  Manjari: 'http://www.malayalamtype.com/fonts/Manjari-Regular.ttf',
-  tlwg: 'https://linux.thai.net/pub/thailinux/software/fonts-tlwg/fonts/ttf-tlwg-0.5.0.tar.gz',
-  Jomolhari:
-    'https://collab.its.virginia.edu/access/content/group/26a34146-33a6-48ce-001e-f16ce7908a6a/Tibetan%20fonts/Tibetan%20Unicode%20Fonts/Jomolhari-alpha003.zip',
-  Padauk: 'http://software.sil.org/downloads/r/padauk/padauk-3.002.zip',
   Quivira: 'http://www.quivira-font.com/files/Quivira.otf',
   UnFonts:
     'http://ftp.jaist.ac.jp/pub/Linux/Momonga/development/source/SOURCES/2607-un-fonts-core-1.0.2-080608.tar.gz',
-  Abyssinica: 'http://software.sil.org/downloads/r/abyssinica/AbyssinicaSIL-1.500.zip',
   NotoSansCherokee:
     'https://github.com/googlefonts/noto-fonts-alpha/raw/main/from-glyphsapp/unhinted/ttf/sans/NotoSansCherokee-Regular.ttf',
-  MongolianScript:
-    'https://web.archive.org/web/20160707014328if_/http://font.bolorsoft.com/download/fonts.zip',
-  Namdhinggo:
-    'http://scripts.sil.org/cms/scripts/render_download.php?format=file&media_id=NamdhinggoSIL1.004&filename=NamdhinggoSIL1.004.zip',
-  DaiBanna:
-    'http://scripts.sil.org/cms/scripts/render_download.php?format=file&media_id=DaiBanna-2.200.zip&filename=DaiBanna-2.200.zip',
   Nishiki: 'https://umihotaru.work/nishiki-teki.zip',
-  Mingzat:
-    'http://scripts.sil.org/cms/scripts/render_download.php?format=file&media_id=Mingzat-0.100&filename=Mingzat-0.100.zip',
-  PonomarUnicode: 'http://www.ponomar.net/files/PonomarUnicode.zip',
-  junicode:
-    'https://sourceforge.net/projects/junicode/files/junicode/junicode-0-7-8/junicode-0-7-8.zip',
-  BTC: 'https://github.com/RWOverdijk/BitKey/raw/master/client/src/fonts/BTC.ttf',
   ObserverSymbol: 'http://hypertexthero.com/static/img/observer-symbol/observer-symbol-latest.zip',
-  Analecta: 'https://www.wfonts.com/download/data/2016/06/09/analecta/analecta.zip',
   BabelStoneHan: 'http://www.babelstone.co.uk/Fonts/Download/BabelStoneHan.zip',
-  OpenSans: 'http://www.opensans.com/download/open-sans.zip',
+  OpenSans:
+    'https://raw.githubusercontent.com/google/fonts/main/ofl/opensans/OpenSans%5Bwdth,wght%5D.ttf',
   DejaVu: 'https://sourceforge.net/projects/dejavu/files/dejavu/2.37/dejavu-fonts-ttf-2.37.zip',
   JGLao: 'https://github.com/hakatashi/font-archive/raw/master/jglao.zip',
-  NotoSerifCJKjp: 'https://noto-website.storage.googleapis.com/pkgs/NotoSerifCJKjp-hinted.zip',
-  LisuUnicode: 'https://github.com/phjamr/LisuUnicode/raw/master/LisuUnicode-Regular.ttf',
-  Wakor: 'http://www.evertype.com/fonts/vai/wakorfont.zip',
-  Charis: 'https://software.sil.org/downloads/r/charis/CharisSIL-5.000.zip',
-  BabelStonePhagsPa: 'http://www.babelstone.co.uk/Fonts/Download/BabelStonePhagspaBook_v2.ttf',
-  Pagul: 'https://sourceforge.net/projects/pagul/files/Pagul_v1.0.zip',
-  TaiHeritage: 'https://software.sil.org/downloads/r/taiheritage/TaiHeritagePro-2.600.zip',
+  NotoSerifCJKjp:
+    'https://github.com/notofonts/noto-cjk/releases/download/Serif2.003/07_NotoSerifCJKjp.zip',
 };
 
 /** Fonts distributed as a bare font file instead of an archive. */
-const NOT_ARCHIVED = new Set([
-  'Quivira',
-  'NotoSansCherokee',
-  'BTC',
-  'Manjari',
-  'LisuUnicode',
-  'BabelStonePhagsPa',
-]);
-
 const headersFor = (directory: string): Record<string, string> => {
   if (directory === 'Hancom') {
     return { referer: 'http://www.hancom.com/' };
   }
 
-  if (['Namdhinggo', 'DaiBanna', 'Mingzat'].includes(directory)) {
-    return { accept: '*/*' };
-  }
-
   return {};
 };
 
-const isGzip = (data: Uint8Array): boolean => data[0] === 0x1f && data[1] === 0x8b;
+type SourceKind = 'zip' | 'tar.gz' | 'font';
+
+/**
+ * Font sites redirect and occasionally answer with an error page, so trust the
+ * downloaded bytes rather than the URL.
+ */
+const detectKind = (data: Uint8Array): SourceKind => {
+  if (data[0] === 0x50 && data[1] === 0x4b) {
+    return 'zip';
+  }
+
+  if (data[0] === 0x1f && data[1] === 0x8b) {
+    return 'tar.gz';
+  }
+
+  const signature = Buffer.from(data.subarray(0, 4)).toString('latin1');
+
+  if (
+    signature === 'OTTO' ||
+    signature === 'true' ||
+    signature === 'ttcf' ||
+    (data[0] === 0 && data[1] === 1 && data[2] === 0 && data[3] === 0)
+  ) {
+    return 'font';
+  }
+
+  throw new Error(`Not a font or an archive (starts with ${JSON.stringify(signature)})`);
+};
+
+/** The name a bare font file is stored under, taken from its URL. */
+const fileNameFor = (url: string): string =>
+  path.basename(decodeURIComponent(new URL(url).pathname));
 
 /** Rejects archive entries that would escape the destination directory. */
 const resolveEntry = (destination: string, entry: string): string | null => {
@@ -108,24 +166,7 @@ const extractZip = async (data: Uint8Array, destination: string): Promise<void> 
   }
 };
 
-const downloadFont = async (directory: string, url: string): Promise<void> => {
-  const destination = path.join(FONTS_DIR, directory);
-
-  try {
-    const files = await fs.readdir(destination);
-
-    if (files.length > 0) {
-      log(`${directory} is already downloaded.`);
-      return;
-    }
-  } catch {
-    // Not downloaded yet.
-  }
-
-  log(`${destination} not exists. Downloading...`);
-
-  await fs.mkdir(destination, { recursive: true });
-
+const fetchSource = async (directory: string, url: string): Promise<Uint8Array> => {
   const response = await fetch(url, { headers: headersFor(directory) });
 
   if (!response.ok) {
@@ -134,21 +175,58 @@ const downloadFont = async (directory: string, url: string): Promise<void> => {
     );
   }
 
-  const data = new Uint8Array(await response.arrayBuffer());
+  return new Uint8Array(await response.arrayBuffer());
+};
 
-  if (NOT_ARCHIVED.has(directory)) {
-    const fileName = path.basename(new URL(url).pathname);
-    await fs.writeFile(path.join(destination, fileName), data);
-  } else if (isGzip(data)) {
-    await pipeline(Readable.from([Buffer.from(data)]), tar.x({ cwd: destination }));
-  } else {
-    await extractZip(data, destination);
+const downloadFont = async (directory: string, sources: string | string[]): Promise<void> => {
+  const urls = Array.isArray(sources) ? sources : [sources];
+  const destination = path.join(FONTS_DIR, directory);
+
+  let existing: string[] = [];
+
+  try {
+    existing = await fs.readdir(destination);
+  } catch {
+    // Not downloaded yet.
+  }
+
+  // A single source unpacks as a whole, so any content means it is complete.
+  if (urls.length === 1 && existing.length > 0) {
+    log(`${directory} is already downloaded.`);
+    return;
+  }
+
+  const pending = urls.filter((url) => !existing.includes(fileNameFor(url)));
+
+  if (pending.length === 0) {
+    log(`${directory} is already downloaded.`);
+    return;
+  }
+
+  log(`Downloading ${pending.length} file(s) into ${destination}...`);
+
+  await fs.mkdir(destination, { recursive: true });
+
+  for (const url of pending) {
+    const data = await fetchSource(directory, url);
+
+    switch (detectKind(data)) {
+      case 'font':
+        await fs.writeFile(path.join(destination, fileNameFor(url)), data);
+        break;
+      case 'tar.gz':
+        await pipeline(Readable.from([Buffer.from(data)]), tar.x({ cwd: destination }));
+        break;
+      case 'zip':
+        await extractZip(data, destination);
+        break;
+    }
   }
 };
 
 const downloadFonts = async (): Promise<void> => {
-  for (const [directory, url] of Object.entries(fonts)) {
-    await downloadFont(directory, url);
+  for (const [directory, sources] of Object.entries(fonts)) {
+    await downloadFont(directory, sources);
   }
 };
 

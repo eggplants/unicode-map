@@ -1,7 +1,7 @@
 # Vai
 
 A500..A63F:
-  font: wakor
+  font: noto-vai
   transform: scale(0.95)
 
   A62C..A63F: notdef
@@ -69,25 +69,25 @@ A6A0..A6FF:
 # Modifier Tone Letters
 
 A700..A71F:
-  font: charis
+  font: noto-serif
   transform: scale(0.9)
 
   A700..A707:
-    font: charis
+    font: noto-serif
     transform: scale(0.9) translate(0, -0.05)
 
   A71E..A71F:
-    font: charis
+    font: noto-serif
     transform: scale(0.9) translate(0, -0.15)
 
 # Latin Extended-D
 
 A720..A7FF:
-  font: doulos
+  font: noto-serif
   transform: scale(0.8)
 
   A78F:
-    font: doulos
+    font: noto-serif
     codepoint: 0x00B7
 
   A79A..A79F:
@@ -96,7 +96,7 @@ A720..A7FF:
 
   # FIXME
   A7AE:
-    font: doulos
+    font: noto-serif
     codepoint: 0x0054
     transform: scale(0.8)
 

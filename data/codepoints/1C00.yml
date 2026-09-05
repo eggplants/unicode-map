@@ -1,50 +1,50 @@
 # Lepcha
 
 1C00..1C4F:
-  font: mingzat
+  font: noto-lepcha
   transform: scale(0.7) translate(0, -0.1)
 
   1C20:
-    font: mingzat
+    font: noto-lepcha
     transform: scale(0.7) translate(-0.05, -0.1)
 
   1C24..1C26:
-    font: mingzat
+    font: noto-lepcha
     combining: true
     transform: scale(0.7) translate(0.4, -0.1)
 
   1C27..1C29:
-    font: mingzat
+    font: noto-lepcha
     combining: true
     transform: scale(0.6) translate(-0.5, -0.1)
 
   1C2A..1C2B:
-    font: mingzat
+    font: noto-lepcha
     combining: true
     transform: scale(0.6) translate(0.5, -0.2)
 
   1C2C:
-    font: mingzat
+    font: noto-lepcha
     combining: true
     transform: scale(0.7) translate(0.4, -0.35)
 
   1C2D..1C33:
-    font: mingzat
+    font: noto-lepcha
     combining: true
     transform: scale(0.7) translate(0.4, 0.1)
 
   1C34..1C35:
-    font: mingzat
+    font: noto-lepcha
     combining: true
     transform: scale(0.7) translate(-0.5, -0.1)
 
   1C36:
-    font: mingzat
+    font: noto-lepcha
     combining: true
     transform: scale(0.7) translate(0.4, 0.1)
 
   1C37:
-    font: mingzat
+    font: noto-lepcha
     combining: true
     transform: scale(0.7) translate(0.4, -0.35)
 
@@ -60,7 +60,7 @@
 # Cyrillic Extended-C
 
 1C80..1C8F:
-  font: ponomar
+  font: noto-serif
   transform: scale(0.8)
 
   1C89..1C8F: notdef
@@ -281,19 +281,19 @@
 # Phonetic Extensions
 
 1D00..1D7F:
-  font: doulos
+  font: noto-serif
   transform: scale(0.9) translate(0, -0.05)
 
 # Phonetic Extensions Supplement
 
 1D80..1DBF:
-  font: doulos
+  font: noto-serif
   transform: scale(0.9) translate(0, -0.05)
 
 # Combining Diacritical Marks Supplement
 
 1DC0..1DFF:
-  font: doulos
+  font: noto-serif
   combining: true
 
   1DC0..1DC1:
@@ -327,12 +327,12 @@
     transform: translate(0.2, -0.2)
 
   1DD0:
-    font: junicode
+    font: noto-serif
     combining: true
     transform: translate(0.3, -0.2)
 
   1DD1..1DD2:
-    font: junicode
+    font: noto-serif
     combining: true
     transform: translate(0.2, 0)
 
