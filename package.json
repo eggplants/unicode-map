@@ -1,51 +1,54 @@
 {
   "name": "unicode-map",
   "version": "1.0.0",
-  "description": "",
   "private": true,
-  "scripts": {
-    "build": "node --max-old-space-size=4096 node_modules/livescript/bin/lsc index.ls",
-    "watch": "concurrently \"npm run chokidar\" \"npm run livereload\"",
-    "chokidar": "chokidar \"data/**/*.yml\" \"lib/*.ls\" -c \"lsc index.ls\"",
-    "livereload": "livereload \"test.svg\" -d",
-    "test": "mocha --compilers ls:livescript test/index.ls"
+  "description": "A bunch of Unicode characters in a poster, on a Hilbert curve",
+  "keywords": [],
+  "homepage": "https://github.com/hakatashi/unicode-map#readme",
+  "bugs": {
+    "url": "https://github.com/hakatashi/unicode-map/issues"
   },
+  "license": "MIT",
+  "author": "Koki Takahashi <hakatasiloving@gmail.com> (http://hakatashi.com/)",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/hakatashi/unicode-map.git"
   },
-  "keywords": [],
-  "author": "Koki Takahashi <hakatasiloving@gmail.com> (http://hakatashi.com/)",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/hakatashi/unicode-map/issues"
+  "type": "module",
+  "scripts": {
+    "build": "node --max-old-space-size=4096 src/index.ts",
+    "watch": "node --max-old-space-size=4096 --watch-path=src --watch-path=data --watch-preserve-output src/index.ts"
   },
-  "homepage": "https://github.com/hakatashi/unicode-map#readme",
   "dependencies": {
-    "anymatch": "^1.3.2",
-    "bluebird": "^3.5.1",
-    "camel-case": "^3.0.0",
-    "chai": "^3.5.0",
-    "chokidar": "^1.7.0",
-    "chokidar-cli": "^1.2.0",
-    "concurrently": "^3.5.0",
-    "download": "^5.0.3",
-    "file-url": "^2.0.2",
+    "@resvg/resvg-js": "^2.6.2",
+    "fflate": "^0.8.3",
     "hilbert": "^2.0.0",
-    "jsdom": "^9.12.0",
-    "livereload": "^0.6.3",
-    "livescript": "^1.5.0",
-    "mkdirp-then": "^1.2.0",
-    "mocha": "^3.5.3",
-    "mz": "^2.7.0",
-    "nightmare": "^2.10.0",
-    "no-case": "^2.3.2",
-    "opentype.js": "^0.7.3",
-    "optionator": "^0.8.2",
-    "progress": "^1.1.8",
-    "snapsvg": "^0.5.1",
-    "svg2png": "^4.1.1",
-    "xmlserializer": "^0.6.0",
-    "yaml-js": "^0.1.5"
+    "jsdom": "^30.0.1",
+    "opentype.js": "^2.0.0",
+    "playwright": "^1.63.0",
+    "progress": "^2.0.3",
+    "tar": "^7.5.22",
+    "yaml": "^2.9.0"
+  },
+  "devDependencies": {
+    "@types/jsdom": "^30.0.0",
+    "@types/node": "^26.4.1",
+    "@types/progress": "^2.0.7",
+    "vite-plus": "0.3.0"
+  },
+  "devEngines": {
+    "packageManager": {
+      "name": "pnpm",
+      "version": "^12.0.0",
+      "onFail": "download"
+    }
+  },
+  "engines": {
+    "node": ">=22.18"
+  },
+  "pnpm": {
+    "overrides": {
+      "vite": "npm:@voidzero-dev/vite-plus-core@0.3.0"
+    }
   }
 }

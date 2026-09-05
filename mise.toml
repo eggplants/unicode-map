@@ -1,0 +1,9 @@
+[plugins]
+# https://github.com/voidzero-dev/vite-plus/issues/943
+vite-plus = "https://github.com/markmals/mise-vite-plus"
+
+[tools]
+claude = "latest"
+pinact = "latest"
+usage = "latest"
+vite-plus = "latest"

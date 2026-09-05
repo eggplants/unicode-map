@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Unicode Map preview</title>
+    <style>
+      :root {
+        color-scheme: light dark;
+      }
+      body {
+        margin: 0;
+        font-family: system-ui, sans-serif;
+      }
+      header {
+        position: sticky;
+        top: 0;
+        display: flex;
+        gap: 0.5rem;
+        align-items: baseline;
+        padding: 0.75rem 1rem;
+        background: Canvas;
+        border-bottom: 1px solid color-mix(in srgb, CanvasText 20%, transparent);
+      }
+      h1 {
+        margin: 0 1rem 0 0;
+        font-size: 1rem;
+      }
+      button[aria-current='true'] {
+        font-weight: bold;
+      }
+      main {
+        padding: 1rem;
+      }
+      img {
+        display: block;
+        width: 100%;
+        height: auto;
+        background: #fff;
+      }
+      p.hint {
+        margin: 0;
+        color: color-mix(in srgb, CanvasText 60%, transparent);
+        font-size: 0.85rem;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Unicode Map</h1>
+      <button type="button" data-chart="bmp-1">bmp-1</button>
+      <button type="button" data-chart="bmp-2">bmp-2</button>
+      <button type="button" data-chart="bmp-3">bmp-3</button>
+      <p class="hint">
+        Edits under <code>data/</code> or <code>src/</code> rebuild the posters and reload this
+        page.
+      </p>
+    </header>
+    <main><img id="chart" alt="Code point chart" /></main>
+    <script type="module">
+      const name = new URLSearchParams(location.search).get('chart') ?? 'bmp-1';
+
+      // The chart is regenerated in place, so bust the cache on every load.
+      document.getElementById('chart').src = `/${name}-chart.svg?t=${Date.now()}`;
+
+      for (const button of document.querySelectorAll('[data-chart]')) {
+        button.ariaCurrent = String(button.dataset.chart === name);
+        button.addEventListener('click', () => {
+          location.search = `?chart=${button.dataset.chart}`;
+        });
+      }
+    </script>
+  </body>
+</html>

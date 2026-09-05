@@ -1,3 +1,0 @@
-require! {
-  './codepoint-builder'
-}

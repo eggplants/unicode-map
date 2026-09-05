@@ -1,12 +1,10 @@
-# The Unicode Map Project [![Build Status][travis-image]][travis-url] [![Greenkeeper badge][greenkeeper-image]][greenkeeper-url]
+# The Unicode Map Project [![CI][ci-image]][ci-url]
 
 A bunch of Unicode characters in a poster, on a [Hilbert curve](https://en.wikipedia.org/wiki/Hilbert_curve).
 
 
-[travis-image]: https://travis-ci.org/hakatashi/unicode-map.svg?branch=master
-[travis-url]: https://travis-ci.org/hakatashi/unicode-map
-[greenkeeper-image]: https://badges.greenkeeper.io/hakatashi/unicode-map.svg
-[greenkeeper-url]: https://greenkeeper.io/
+[ci-image]: https://github.com/hakatashi/unicode-map/actions/workflows/ci.yml/badge.svg
+[ci-url]: https://github.com/hakatashi/unicode-map/actions/workflows/ci.yml
 
 ![](https://i.imgur.com/cEVN9VR.jpg)
 
@@ -43,12 +41,23 @@ Development version of the builds are available in the [Release page](https://gi
 
 ## 💪 Build
 
-Install [Node.js 8+](https://nodejs.org/) and run:
+This project is built with [Vite+](https://viteplus.dev/) on pnpm. Install the `vp` CLI, then run:
 
-    npm install
-    npm run build
+    vp install
+    vp exec playwright install chromium
+    vp run build
 
 **WARN: This command will download almost 1GB of the font data from the internet, and cache them into `fonts` subdirectory.**
+
+`vp check` formats, lints and type checks the sources, and `vp test` runs the unit tests.
+
+`vp run watch` rebuilds whenever a file under `src` or `data` changes, and
+`vp dev` additionally serves a preview of the generated charts at `/dev/` that
+reloads itself after every successful rebuild.
+
+PNG rasterisation is done by [resvg](https://github.com/yisibl/resvg-js) and PDF
+export by headless Chromium through [Playwright](https://playwright.dev/), so
+`playwright install chromium` is required before building.
 
 ## 🔰 License
 

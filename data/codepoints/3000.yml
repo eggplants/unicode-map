@@ -68,21 +68,6 @@
     codepoint: 0x5345
     transform: scale(0.9) translate(0, 0.05)
 
-  3038:
-    font: ipaexm
-    codepoint: 0x5341
-    transform: scale(0.9) translate(0, 0.05)
-
-  3039:
-    font: ipaexm
-    codepoint: 0x5efe
-    transform: scale(0.9) translate(0, 0.05)
-
-  303A:
-    font: ipaexm
-    codepoint: 0x5345
-    transform: scale(0.9) translate(0, 0.05)
-
   303E:
     font: hancom
     box: true
