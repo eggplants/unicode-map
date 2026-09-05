@@ -68,7 +68,8 @@ const NOTO_FAMILIES = [
  * for bare font files, which are stored side by side under that directory.
  */
 const fonts: Record<string, string | string[]> = {
-  Symbola: 'https://www.wfonts.com/download/data/2016/04/23/symbola/symbola.zip',
+  Symbola:
+    'https://web.archive.org/web/20180307013123if_/http://users.teilar.gr/~g1951d/Symbola.zip',
   Noto: [
     ...NOTO_FAMILIES.map((family) => `${NOTOFONTS}/${family}/hinted/ttf/${family}-Regular.ttf`),
     // Noto Sans Tibetan was retired upstream; the archive still carries it.
@@ -78,7 +79,7 @@ const fonts: Record<string, string | string[]> = {
   ],
   IPAexm: 'https://moji.or.jp/wp-content/ipafont/IPAexfont/ipaexm00401.zip',
   IPAmjm: 'https://dforest.watch.impress.co.jp/library/i/ipamjfont/10750/ipamjm00601.zip',
-  hanazono: 'https://glyphwiki.org/hanazono/hanazono-20170904.zip',
+  hanazono: 'https://ftp.iij.ad.jp/pub/osdn.jp/hanazono-font/68253/hanazono-20170904.zip',
   FreeFont: 'https://ftp.gnu.org/gnu/freefont/freefont-ttf-20120503.zip',
   Hancom: 'http://cdn.hancom.com/pds/docs/HancomFont.zip',
   Scheherazade: 'http://software.sil.org/downloads/r/scheherazade/Scheherazade-2.100.zip',
@@ -99,12 +100,20 @@ const fonts: Record<string, string | string[]> = {
 };
 
 /** Fonts distributed as a bare font file instead of an archive. */
+/** Some hosts reject requests that keep Node's default `node` user agent. */
+const USER_AGENT = 'unicode-map/1.0 (+https://github.com/eggplants/unicode-map)';
+
 const headersFor = (directory: string): Record<string, string> => {
+  const headers: Record<string, string> = {
+    'user-agent': USER_AGENT,
+    accept: '*/*',
+  };
+
   if (directory === 'Hancom') {
-    return { referer: 'http://www.hancom.com/' };
+    headers.referer = 'http://www.hancom.com/';
   }
 
-  return {};
+  return headers;
 };
 
 type SourceKind = 'zip' | 'tar.gz' | 'font';

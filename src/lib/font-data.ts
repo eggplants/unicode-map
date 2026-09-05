@@ -13,7 +13,7 @@ export type FontDefinition = {
 
 export const fontData: Record<string, FontDefinition> = {
   symbola: {
-    name: 'Symbola',
+    name: 'Symbola 10.24',
     URL: 'http://users.teilar.gr/~g1951d/',
     author: 'George Douros',
     license: 'Permissive License',
