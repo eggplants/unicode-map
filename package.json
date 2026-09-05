@@ -4,15 +4,15 @@
   "private": true,
   "description": "A bunch of Unicode characters in a poster, on a Hilbert curve",
   "keywords": [],
-  "homepage": "https://github.com/hakatashi/unicode-map#readme",
+  "homepage": "https://github.com/eggplants/unicode-map#readme",
   "bugs": {
-    "url": "https://github.com/hakatashi/unicode-map/issues"
+    "url": "https://github.com/eggplants/unicode-map/issues"
   },
   "license": "MIT",
   "author": "Koki Takahashi <hakatasiloving@gmail.com> (http://hakatashi.com/)",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/hakatashi/unicode-map.git"
+    "url": "git+https://github.com/eggplants/unicode-map.git"
   },
   "type": "module",
   "scripts": {

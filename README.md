@@ -3,8 +3,8 @@
 A bunch of Unicode characters in a poster, on a [Hilbert curve](https://en.wikipedia.org/wiki/Hilbert_curve).
 
 
-[ci-image]: https://github.com/hakatashi/unicode-map/actions/workflows/ci.yml/badge.svg
-[ci-url]: https://github.com/hakatashi/unicode-map/actions/workflows/ci.yml
+[ci-image]: https://github.com/eggplants/unicode-map/actions/workflows/ci.yml/badge.svg
+[ci-url]: https://github.com/eggplants/unicode-map/actions/workflows/ci.yml
 
 ![](https://i.imgur.com/cEVN9VR.jpg)
 
@@ -37,7 +37,7 @@ The poster is developed with open source and the poster data [can be downloaded]
 
 ### Development version
 
-Development version of the builds are available in the [Release page](https://github.com/hakatashi/unicode-map/releases).
+Development version of the builds are available in the [Release page](https://github.com/eggplants/unicode-map/releases).
 
 ## 💪 Build
 
