@@ -46,23 +46,17 @@ Development version of the builds are available in the [Release page](https://gi
 
 ## 💪 Build
 
-This project is built with [Vite+](https://viteplus.dev/) on pnpm. Install the `vp` CLI, then run:
+```bash
+mise install
+mise generate git-pre-commit -w
+vp install
+vp exec playwright install chromium
 
-    vp install
-    vp exec playwright install chromium
-    vp run build
+mise run build
 
-**WARN: This command will download around 550MB of the font data from the internet, and cache them into `fonts` subdirectory.**
-
-`vp check` formats, lints and type checks the sources, and `vp test` runs the unit tests.
-
-`vp run watch` rebuilds whenever a file under `src` or `data` changes, and
-`vp dev` additionally serves a preview of the generated charts at `/dev/` that
-reloads itself after every successful rebuild.
-
-PNG rasterisation is done by [resvg](https://github.com/yisibl/resvg-js) and PDF
-export by headless Chromium through [Playwright](https://playwright.dev/), so
-`playwright install chromium` is required before building.
+mise run test
+mise run dev
+```
 
 ## 🔰 License
 
@@ -70,12 +64,9 @@ The overall repository is licensed under [GPLv3](https://www.gnu.org/licenses/gp
 
 The files not in the `data/glyphs` subdirectory are also licensed under [MIT License](https://opensource.org/licenses/MIT) by hakatashi.
 
-## 🛣️ Roadmap
-
-* Full support of BMP
-* More permissive license
-
 ## 🙏 Materials
+
+<details>
 
 * ArmenianEternity.svg
 	* link: https://commons.wikimedia.org/wiki/File:ArmenianEternity.svg
@@ -157,3 +148,5 @@ The files not in the `data/glyphs` subdirectory are also licensed under [MIT Lic
 	* author: Natanael Gama
 	* license: SIL OFL 1.1
 	* for: Poster Design
+
+</details>
