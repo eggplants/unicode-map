@@ -1,6 +1,6 @@
 {
   "name": "unicode-map",
-  "version": "1.0.0",
+  "version": "4.0.1",
   "private": true,
   "description": "A bunch of Unicode characters in a poster, on a Hilbert curve",
   "keywords": [],
@@ -8,8 +8,11 @@
   "bugs": {
     "url": "https://github.com/eggplants/unicode-map/issues"
   },
-  "license": "MIT",
+  "license": "SEE LICENSE IN <https://github.com/eggplants/unicode-map#-license>",
   "author": "Koki Takahashi <hakatasiloving@gmail.com> (http://hakatashi.com/)",
+  "contributors": [
+    "eggplants <w10776e8w@yahoo.co.jp> (https://key.egpl.dev/)"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/eggplants/unicode-map.git"
