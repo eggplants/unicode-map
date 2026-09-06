@@ -1,6 +1,6 @@
 {
   "name": "unicode-map",
-  "version": "4.0.1",
+  "version": "4.0.2",
   "private": true,
   "description": "A bunch of Unicode characters in a poster, on a Hilbert curve",
   "keywords": [],
