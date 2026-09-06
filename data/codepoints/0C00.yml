@@ -5,8 +5,9 @@
   transform: scale(0.8)
 
   0C00:
-    svg: true
+    font: noto-telugu
     combining: true
+    transform: scale(0.87) translate(0.29, 0.04)
 
   0C01:
     font: noto-telugu
@@ -24,19 +25,24 @@
     transform: scale(0.8) translate(0.3, -0.1)
 
   0C04:
-    early: true
-    svg: true
+    font: noto-telugu
     combining: true
+    transform: scale(0.8) translate(0.29, 0.03)
 
   0C0D: notdef
   0C11: notdef
   0C29: notdef
 
   0C34:
-    svg: true
-    transform: scale(0.8)
+    font: noto-telugu
+    transform: scale(0.76) translate(0, -0.03)
 
-  0C3A..0C3C: notdef
+  0C3A..0C3B: notdef
+
+  0C3C:
+    font: noto-telugu
+    combining: true
+    transform: translate(0, -0.34)
 
   0C3E..0C40:
     font: noto-telugu
@@ -87,10 +93,13 @@
   0C57: notdef
 
   0C5A:
-    svg: true
-    transform: scale(0.8)
+    font: noto-telugu
+    transform: scale(0.8) translate(0, -0.03)
 
-  0C5B..0C5F: notdef
+  # U+0C5C is a Unicode 17.0 addition.
+  0C5B..0C5C: notdef
+
+  0C5E..0C5F: notdef
 
   0C60:
     font: noto-telugu
@@ -105,8 +114,8 @@
   0C70..0C76: notdef
 
   0C77:
-    early: true
-    svg: true
+    font: noto-telugu
+    transform: scale(0.57) translate(-0.02, -0.1)
 
 # Kannada
 
@@ -115,8 +124,8 @@
   transform: scale(0.75)
 
   0C80:
-    svg: true
-    transform: scale(0.75)
+    font: noto-kannada
+    transform: scale(0.55) translate(0, -0.14)
 
   0C81:
     font: noto-kannada
@@ -134,9 +143,8 @@
     transform: scale(0.75) translate(0.4, -0.05)
 
   0C84:
-    early: true
-    svg: true
-    transform: scale(0.9)
+    font: noto-kannada
+    transform: scale(0.51) translate(-0.02, -0.06)
 
   0C8D: notdef
   0C91: notdef
@@ -230,7 +238,8 @@
     combining: true
     transform: scale(0.75) translate(0.5, -0.4)
 
-  0CD7..0CDD: notdef
+  # U+0CDC is a Unicode 17.0 addition.
+  0CD7..0CDC: notdef
   0CDF: notdef
 
   0CE0:
@@ -250,7 +259,12 @@
     transform: scale(0.75)
     box: true
 
-  0CF3..0CFF: notdef
+  0CF3:
+    font: noto-kannada
+    combining: true
+    transform: translate(0.26, 0.25)
+
+  0CF4..0CFF: notdef
 
 # Malayalam
 
@@ -259,8 +273,9 @@
   transform: scale(0.8) translate(0, -0.1)
 
   0D00:
-    svg: true
+    font: noto-malayalam
     combining: true
+    transform: scale(0.54) translate(0.28, -0.03)
 
   0D01:
     font: noto-malayalam
@@ -277,7 +292,9 @@
     combining: true
     transform: scale(0.8) translate(0.3, -0.1)
 
-  0D04: notdef
+  0D04:
+    font: notoMalayalam
+    transform: translate(0, -0.1)
 
   0D08:
     font: free-serif
@@ -291,9 +308,15 @@
 
   0D11: notdef
 
-  0D3B..0D3C:
-    svg: true
+  0D3B:
+    font: noto-malayalam
     combining: true
+    transform: scale(0.9) translate(0.28, 0.06)
+
+  0D3C:
+    font: noto-malayalam
+    combining: true
+    transform: scale(0.61) translate(0.44, 0.11)
 
   0D3E:
     font: free-serif
@@ -319,9 +342,20 @@
 
   0D49: notdef
 
-  0D4A..0D4C:
-    svg: true
+  0D4A:
+    font: noto-malayalam
     combining: true
+    transform: scale(0.64) translate(-0.08, -0.06)
+
+  0D4B:
+    font: noto-malayalam
+    combining: true
+    transform: scale(0.64) translate(-0.04, -0.06)
+
+  0D4C:
+    font: noto-malayalam
+    combining: true
+    transform: scale(0.59) translate(0.06, -0.06)
 
   0D4D:
     font: free-serif
@@ -385,7 +419,12 @@
   font: free-serif
   transform: scale(0.8) translate(0, -0.1)
 
-  0D80..0D81: notdef
+  0D80: notdef
+
+  0D81:
+    font: notoSinhala
+    combining: true
+    transform: translate(0.32, 0.19)
 
   0D82:
     font: free-serif
@@ -451,17 +490,29 @@
     transform: scale(0.5, 0.8) translate(-0.65, -0.1)
 
   0DDA:
-    svg: true
+    font: noto-sinhala
     combining: true
+    transform: scale(0.54) translate(-0.23, -0.01)
 
   0DDB:
     font: free-serif
     combining: true
     transform: scale(0.25, 0.8) translate(-1.25, -0.1)
 
-  0DDC..0DDE:
-    svg: true
+  0DDC:
+    font: noto-sinhala
     combining: true
+    transform: scale(0.72) translate(-0.13, -0.11)
+
+  0DDD:
+    font: noto-sinhala
+    combining: true
+    transform: scale(0.66) translate(-0.11, -0.07)
+
+  0DDE:
+    font: noto-sinhala
+    combining: true
+    transform: scale(0.67) translate(-0.09, -0.11)
 
   0DDF:
     font: free-serif
@@ -470,9 +521,45 @@
 
   0DE0..0DE5: notdef
 
-  0DE6..0DEF:
-    svg: true
-    transform: scale(0.8)
+  0DE6:
+    font: noto-sinhala
+    transform: scale(0.99) translate(0.01, 0.02)
+
+  0DE7:
+    font: noto-sinhala
+    transform: scale(0.52) translate(0.02, -0.04)
+
+  0DE8:
+    font: noto-sinhala
+    transform: scale(0.57) translate(0, -0.04)
+
+  0DE9:
+    font: noto-sinhala
+    transform: scale(0.52) translate(0, -0.04)
+
+  0DEA:
+    font: noto-sinhala
+    transform: scale(0.56) translate(0, -0.02)
+
+  0DEB:
+    font: noto-sinhala
+    transform: scale(0.52) translate(-0.04, -0.18)
+
+  0DEC:
+    font: noto-sinhala
+    transform: scale(0.75) translate(0, -0.05)
+
+  0DED:
+    font: noto-sinhala
+    transform: scale(0.91) translate(-0.01, 0.02)
+
+  0DEE:
+    font: noto-sinhala
+    transform: scale(0.58) translate(-0.01, -0.06)
+
+  0DEF:
+    font: noto-sinhala
+    transform: scale(0.6) translate(0, -0.05)
 
   0DF0..0DF1: notdef
 

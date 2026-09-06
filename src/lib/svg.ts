@@ -1,7 +1,39 @@
 import { JSDOM } from 'jsdom';
+import type { Path } from 'opentype.js';
 import type { Matrix } from './matrix.ts';
 
 const SVG_NAMESPACE = 'http://www.w3.org/2000/svg';
+
+/** Decimal places kept when serialising glyph outlines. */
+const PATH_PRECISION = 2;
+
+const round = (value: number): number => Number(value.toFixed(PATH_PRECISION));
+
+/**
+ * Serialises a glyph outline.
+ *
+ * opentype.js 2.0.0 rounds through `Math.round(value + 'e+2') + 'e-2'`, which
+ * evaluates to `NaN` as soon as the fractional part is small enough for
+ * JavaScript to stringify it in exponential notation (`8.88e-16` and the like).
+ * A single `NaN` invalidates the whole `d` attribute, so glyphs would silently
+ * disappear. The commands themselves are sound, so they are written out here.
+ */
+export const toPathData = (path: Path): string =>
+  path.commands
+    .map((command) => {
+      switch (command.type) {
+        case 'M':
+        case 'L':
+          return `${command.type}${round(command.x)} ${round(command.y)}`;
+        case 'C':
+          return `C${round(command.x1)} ${round(command.y1)} ${round(command.x2)} ${round(command.y2)} ${round(command.x)} ${round(command.y)}`;
+        case 'Q':
+          return `Q${round(command.x1)} ${round(command.y1)} ${round(command.x)} ${round(command.y)}`;
+        default:
+          return 'Z';
+      }
+    })
+    .join('');
 
 /** Sets several attributes at once, skipping the ones that are not given. */
 export const setAttributes = (

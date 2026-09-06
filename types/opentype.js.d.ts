@@ -7,7 +7,14 @@ declare module 'opentype.js' {
     flipYBase?: number;
   };
 
+  export type PathCommand =
+    | { type: 'M' | 'L'; x: number; y: number }
+    | { type: 'C'; x1: number; y1: number; x2: number; y2: number; x: number; y: number }
+    | { type: 'Q'; x1: number; y1: number; x: number; y: number }
+    | { type: 'Z' };
+
   export class Path {
+    commands: PathCommand[];
     toPathData(options?: PathDataOptions | number): string;
   }
 

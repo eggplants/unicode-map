@@ -91,6 +91,12 @@ export const fontData: Record<string, FontDefinition> = {
   notoGujarati: {
     path: 'Noto/NotoSerifGujarati-Regular.ttf',
   },
+  notoOriya: {
+    path: 'Noto/NotoSansOriya-Regular.ttf',
+  },
+  notoSinhala: {
+    path: 'Noto/NotoSerifSinhala-Regular.ttf',
+  },
   notoTamil: {
     path: 'Noto/NotoSerifTamil-Regular.ttf',
   },
@@ -237,6 +243,14 @@ export const fontData: Record<string, FontDefinition> = {
   scheherazadeBold: {
     path: 'Scheherazade/Scheherazade-2.100/Scheherazade-Bold.ttf',
   },
+  scheherazadeNew: {
+    name: 'Scheherazade New 4.300',
+    URL: 'https://software.sil.org/scheherazade/',
+    author: 'SIL International',
+    license: 'SIL OFL 1.1',
+    licenseURL: 'http://scripts.sil.org/ofl',
+    path: 'ScheherazadeNew/ScheherazadeNew-4.300/ScheherazadeNew-Regular.ttf',
+  },
   quivira: {
     name: 'Quivira 4.1',
     URL: 'http://www.quivira-font.com/',
@@ -301,13 +315,5 @@ export const fontData: Record<string, FontDefinition> = {
     license: 'Free License',
     licenseURL: 'https://dejavu-fonts.github.io/License.html',
     path: 'DejaVu/dejavu-fonts-ttf-2.37/ttf/DejaVuSerif.ttf',
-  },
-  jglao: {
-    name: 'JG Lao Times',
-    URL: 'https://web.archive.org/web/20090729181203/http://geocities.com/jglavy/asian.html',
-    author: 'GlavyFonts',
-    license: 'Permissive License',
-    licenseURL: 'https://web.archive.org/web/20090729181203/http://geocities.com/jglavy/asian.html',
-    path: 'JGLao/JG LaoTimesOT.ttf',
   },
 };

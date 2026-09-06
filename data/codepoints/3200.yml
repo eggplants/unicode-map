@@ -26,7 +26,6 @@
     font: hancom
     transform: scale(0.9) translate(0, 0.05)
 
-  32FF: notdef
 
 # CJK Compatibility
 
@@ -35,8 +34,8 @@
   transform: scale(0.9) translate(0, 0.05)
 
   332C:
-    svg: true
-    transform: scale(0.85)
+    font: hanamin-a
+    transform: scale(0.79) translate(-0.02, 0.06)
 
   3358..337A:
     font: hancom

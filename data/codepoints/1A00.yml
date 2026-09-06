@@ -181,7 +181,78 @@
     combining: true
     transform: translate(0.25, 0)
 
-  1ABF..1AFF: notdef
+  1ABF..1AC0:
+    font: nishiki
+    combining: true
+    transform: translate(0.28, -0.15)
+
+  1AC1:
+    font: nishiki
+    combining: true
+    transform: scale(0.85) translate(0.55, 0.09)
+
+  1AC2:
+    font: nishiki
+    combining: true
+    transform: scale(0.86) translate(0.04, 0.09)
+
+  1AC3:
+    font: nishiki
+    combining: true
+    transform: translate(0.55, -0.14)
+
+  1AC4:
+    font: nishiki
+    combining: true
+    transform: translate(0.04, -0.14)
+
+  1AC5:
+    font: nishiki
+    combining: true
+    transform: scale(0.82) translate(0.29, 0.07)
+
+  1AC6:
+    font: nishiki
+    combining: true
+    transform: scale(0.93) translate(0.3, 0.13)
+
+  1AC7..1AC8:
+    font: nishiki
+    combining: true
+    transform: translate(0.29, 0.12)
+
+  1AC9:
+    font: nishiki
+    combining: true
+    transform: translate(0.3, 0.12)
+
+  1ACA:
+    font: nishiki
+    combining: true
+    transform: translate(0.3, -0.14)
+
+  1ACB:
+    font: nishiki
+    combining: true
+    transform: scale(0.93) translate(0.27, 0.09)
+
+  1ACC:
+    font: nishiki
+    combining: true
+    transform: scale(0.83) translate(0.29, 0.04)
+
+  1ACD:
+    font: nishiki
+    combining: true
+    transform: scale(0.84) translate(0.3, 0.05)
+
+  1ACE:
+    font: nishiki
+    combining: true
+    transform: translate(0.29, 0.13)
+
+  # U+1ACF..1AEB are Unicode 17.0 additions.
+  1ACF..1AFF: notdef
 
 # Balinese
 # Consider using Aksara Bali instead of Noto
@@ -221,9 +292,40 @@
     combining: true
     transform: scale(0.7) translate(0.3, -0.2)
 
-  1B3B..1B41:
-    svg: true
+  1B3B:
+    font: noto-balinese
     combining: true
+    transform: scale(0.44) translate(0.8, -0.11)
+
+  1B3C:
+    font: noto-balinese
+    combining: true
+    transform: scale(0.63) translate(0.36, -0.09)
+
+  1B3D:
+    font: noto-balinese
+    combining: true
+    transform: scale(0.55) translate(0.54, -0.07)
+
+  1B3E:
+    font: noto-balinese
+    combining: true
+    transform: scale(0.52) translate(-0.58, -0.12)
+
+  1B3F:
+    font: noto-balinese
+    combining: true
+    transform: scale(0.57) translate(-0.51, -0.2)
+
+  1B40:
+    font: noto-balinese
+    combining: true
+    transform: scale(0.52) translate(0, -0.12)
+
+  1B41:
+    font: noto-balinese
+    combining: true
+    transform: scale(0.57) translate(0.02, -0.2)
 
   1B42:
     font: noto-balinese
@@ -244,7 +346,22 @@
     font: noto-balinese
     transform: scale(0.5, 0.7) translate(0, -0.2)
 
-  1B4C..1B4F: notdef
+  1B4C:
+    font: noto-balinese
+    transform: scale(0.81) translate(0, -0.28)
+
+  1B4D: notdef
+
+  # Inverted forms of U+1B5E and U+1B5F.
+  1B4E:
+    font: noto-balinese
+    codepoint: 0x1B5E
+    transform: rotate(180) scale(0.95) translate(0.02, -0.2)
+
+  1B4F:
+    font: noto-balinese
+    codepoint: 0x1B5F
+    transform: rotate(180) scale(0.95) translate(0.02, -0.2)
 
   1B6B:
     font: noto-balinese
@@ -261,7 +378,16 @@
     combining: true
     transform: scale(0.7) translate(0.3, 0)
 
-  1B7D..1B7F: notdef
+  1B7D:
+    font: noto-balinese
+    transform: scale(0.28) translate(-0.02, -0.42)
+
+  1B7E:
+    font: noto-balinese
+    transform: scale(0.25) translate(0.05, -0.47)
+
+  # No available font carries U+1B7F BALINESE PANTI BAWAK.
+  1B7F: notdef
 
 # Sundanese
 

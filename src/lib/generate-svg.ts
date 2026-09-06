@@ -8,7 +8,7 @@ import type { PosterConfig } from '../configs.ts';
 import type { CodepointInfo } from './codepoint-builder.ts';
 import { fontData } from './font-data.ts';
 import { Matrix, parseTransform } from './matrix.ts';
-import { Paper, setAttributes, setTransform } from './svg.ts';
+import { Paper, setAttributes, setTransform, toPathData } from './svg.ts';
 import { camelCase, fromRoot, log, toHex } from './util.ts';
 
 /** Side length of a single glyph cell, in chart units. */
@@ -20,12 +20,6 @@ const HILBERT_ORDER = 256;
 const CUSTOM_GLYPH_EM = 2048;
 const CONTROL_TEXT_SIZE = 768;
 const ANCHOR_SIZE = 2;
-
-/**
- * opentype.js flips the outline vertically by default, but `getPath` already
- * returns it in SVG orientation, so flipping again renders glyphs upside down.
- */
-const PATH_DATA = { flipY: false };
 
 type GlyphInfo = { name: string; font: Font; glyph: Glyph };
 
@@ -180,9 +174,7 @@ const generateSvg = async (
       const lines = codepointInfo.shortName.split('\\n');
 
       for (const [lineIndex, line] of lines.entries()) {
-        const textPath = textFont
-          .getPath(line, 1024, 1024, CONTROL_TEXT_SIZE)
-          .toPathData(PATH_DATA);
+        const textPath = toPathData(textFont.getPath(line, 1024, 1024, CONTROL_TEXT_SIZE));
         const text = paper.path(textPath);
         const textWidth = textFont
           .stringToGlyphs(line)
@@ -244,14 +236,14 @@ const generateSvg = async (
         const fontGroup = paper.group();
 
         const width = (glyphInfo.glyph.advanceWidth / glyphInfo.font.unitsPerEm) * BLOCK_SIZE;
-        const glyphPath = glyphInfo.glyph
-          .getPath((BLOCK_SIZE - width) / 2, 25, BLOCK_SIZE)
-          .toPathData(PATH_DATA);
+        const glyphPath = toPathData(
+          glyphInfo.glyph.getPath((BLOCK_SIZE - width) / 2, 25, BLOCK_SIZE),
+        );
         const glyphElement = paper.path(glyphPath);
 
         const fontCountName = glyphInfo.name.startsWith('noto')
           ? 'noto'
-          : glyphInfo.name.startsWith('scheherazade')
+          : glyphInfo.name === 'scheherazadeBold'
             ? 'scheherazade'
             : glyphInfo.name;
 

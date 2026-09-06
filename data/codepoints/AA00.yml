@@ -207,10 +207,18 @@ AB30..AB6F:
   font: quivira
   transform: scale(0.8)
 
-  # FIXME
-  AB60..AB63: notdef
+  # Noto Serif's U+AB61 outline is broken, so this range uses Symbola.
+  AB60..AB63:
+    font: symbola
+    transform: scale(0.8)
 
-  AB66..AB6F: notdef
+  AB66..AB6B:
+    font:
+      - noto-serif
+      - nishiki
+    transform: scale(0.8)
+
+  AB6C..AB6F: notdef
 
 # Cherokee Supplement
 

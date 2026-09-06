@@ -16,12 +16,15 @@
     font: nishiki
     transform: scale(0.8)
 
-  2E4A..2E4F: # Early mapping
-    early: true
+  2E4A..2E4F:
     font: nishiki
     transform: scale(0.8)
 
-  2E50..2E7F: notdef
+  2E50..2E5D:
+    font: nishiki
+    transform: scale(0.8)
+
+  2E5E..2E7F: notdef
 
 # CJK Radicals Supplement
 
@@ -52,4 +55,6 @@
   font: ipaexm
   transform: scale(0.9) translate(0, 0.05)
 
-  2FFC..2FFF: notdef
+  2FFC..2FFF:
+    font: nishiki
+    transform: scale(0.9) translate(0, 0.05)

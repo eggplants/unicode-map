@@ -63,99 +63,19 @@
   font: noto-serif
   transform: scale(0.8)
 
-  1C89..1C8F: notdef
+  1C89..1C8A:
+    font: nishiki
+    transform: scale(0.8)
+
+  1C8B..1C8F: notdef
 
 # Georgian Extended
 
 1C90..1CBF:
-  font: dejavu
-  transform: scale(0.8)
-  early: true
-
-  1C90..1CB6:
-    font: dejavu
-    transform: scale(0.7)
-    early: true
-    codepoint:
-      - 0xF400
-      - 0xF401
-      - 0xF402
-      - 0xF403
-      - 0xF404
-      - 0xF405
-      - 0xF406
-      - 0xF407
-      - 0xF408
-      - 0xF409
-      - 0xF40A
-      - 0xF40B
-      - 0xF40C
-      - 0xF40D
-      - 0xF40E
-      - 0xF40F
-      - 0xF410
-      - 0xF411
-      - 0xF412
-      - 0xF413
-      - 0xF414
-      - 0xF415
-      - 0xF416
-      - 0xF417
-      - 0xF418
-      - 0xF419
-      - 0xF41A
-      - 0xF41B
-      - 0xF41C
-      - 0xF41D
-      - 0xF41E
-      - 0xF41F
-      - 0xF420
-      - 0xF421
-      - 0xF422
-      - 0xF423
-      - 0xF424
-      - 0xF425
-      - 0xF426
-
-  1CB7:
-    transform: translate(0, -0.02) scale(0.7)
-    early: true
-    svg: true
-
-  1CB8:
-    font: dejavu
-    transform: scale(0.7) scale(-1, 1)
-    codepoint: 0xF417
-    early: true
-
-  1CB9:
-    font: dejavu
-    transform: translate(0, -0.05) scale(0.7) rotate(180)
-    codepoint: 0xF402
-    early: true
-
-  1CBA:
-    transform: scale(0.7)
-    svg: true
-    early: true
+  font: noto-georgian
+  transform: scale(0.7)
 
   1CBB..1CBC: notdef
-
-  1CBD:
-    transform: scale(0.7)
-    early: true
-    svg: true
-
-  1CBE:
-    font: dejavu
-    transform: translate(0, -0.05) scale(0.7) rotate(180)
-    codepoint: 0xF422
-    early: true
-
-  1CBF:
-    transform: scale(0.7)
-    svg: true
-    early: true
 
 # Sundanese Supplement
 
@@ -264,17 +184,23 @@
     transform: translate(0.15, 0.3)
 
   1CF7:
-    svg: true
+    font: noto-bengali
     combining: true
+    transform: scale(0.88) translate(0.28, -0.01)
 
-  1CF8..1CF9:
-    svg: true
+  1CF8:
+    font: noto-devanagari
     combining: true
+    transform: scale(0.77) translate(0.12, 0.06)
+
+  1CF9:
+    font: noto-devanagari
+    combining: true
+    transform: scale(0.77) translate(0.26, 0.06)
 
   1CFA:
     svg: true
     transform: scale(0.8)
-    early: true
 
   1CFB..1CFF: notdef
 
@@ -433,11 +359,30 @@
     codepoint: 0x02D4
     transform: translate(0, -0.5)
 
-  1DF6..1DF9:
-    svg: true
+  1DF6:
+    font: noto-serif
     combining: true
+    transform: scale(0.88) translate(0.15, 0.06)
 
-  1DFA..1DFA: notdef
+  1DF7:
+    font: noto-serif
+    combining: true
+    transform: scale(0.88) translate(-0.16, 0.06)
+
+  1DF8:
+    font: noto-serif
+    combining: true
+    transform: scale(0.8) translate(-0.13, 0.07)
+
+  1DF9:
+    font: noto-serif
+    combining: true
+    transform: scale(0.77) translate(0, -0.17)
+
+  1DFA:
+    font: nishiki
+    combining: true
+    transform: translate(0.35, -0.15)
 
   1DFB:
     font: nishiki

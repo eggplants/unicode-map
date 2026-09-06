@@ -58,90 +58,24 @@
   0E83: notdef
   0E85: notdef
 
-  0E86:
-    early: true
-    font: jglao
-    codepoint: 0x0E83
-    transform: scale(0.9) translate(0, -0.1)
 
-  0E89:
-    early: true
-    font: jglao
-    transform: scale(0.9) translate(0, -0.1)
 
   0E8B: notdef
 
-  0E8C:
-    early: true
-    font: jglao
-    codepoint: 0x0E8B
-    transform: scale(0.9) translate(0, -0.1)
 
-  0E8E:
-    early: true
-    font: jglao
-    codepoint: 0x0E8C
-    transform: scale(0.9) translate(0, -0.1)
 
-  0E8F:
-    early: true
-    font: jglao
-    codepoint: 0x0E8E
-    transform: scale(0.9) translate(0, -0.1)
 
-  0E90:
-    early: true
-    font: jglao
-    codepoint: 0x0E8F
-    transform: scale(0.9) translate(0, -0.1)
 
-  0E91:
-    early: true
-    font: jglao
-    codepoint: 0x0E90
-    transform: scale(0.9) translate(0, -0.1)
 
-  0E92:
-    early: true
-    font: jglao
-    codepoint: 0x0E91
-    transform: scale(0.9) translate(0, -0.1)
 
-  0E93:
-    early: true
-    font: jglao
-    transform: scale(0.9) translate(0, -0.1)
 
-  0E98:
-    early: true
-    font: jglao
-    codepoint: 0x0EE5
-    transform: scale(0.9) translate(0, -0.1)
 
-  0EA0:
-    early: true
-    font: jglao
-    transform: scale(0.9) translate(0, -0.1)
 
   0EA4: notdef
   0EA6: notdef
 
-  0EA8:
-    early: true
-    font: jglao
-    codepoint: 0x0EA4
-    transform: scale(0.9) translate(0, -0.1)
 
-  0EA9:
-    early: true
-    font: jglao
-    codepoint: 0x0EA6
-    transform: scale(0.9) translate(0, -0.1)
 
-  0EAC:
-    early: true
-    font: jglao
-    transform: scale(0.9) translate(0, -0.1)
 
   0EB1:
     font: noto-lao
@@ -159,10 +93,9 @@
     transform: scale(0.7) translate(0.2, -0.1)
 
   0EBA:
-    early: true
+    font: noto-lao
     combining: true
-    font: jglao
-    transform: scale(0.9) translate(0.2, -0.2)
+    transform: scale(0.7) translate(0.2, -0.1)
 
   0EBB:
     font: noto-lao
@@ -183,7 +116,12 @@
     combining: true
     transform: scale(0.7) translate(0.25, 0.3)
 
-  0ECE..0ECF: notdef
+  0ECE:
+    font: noto-lao
+    combining: true
+    transform: scale(0.7) translate(0.05, 0.3)
+
+  0ECF: notdef
   0EDA..0EDB: notdef
   0EE0..0EFF: notdef
 
@@ -273,17 +211,34 @@
     transform: scale(0.8) translate(0.2, 0.25)
 
   0F73:
-    svg: true
+    font: noto-tibetan
     combining: true
+    transform: scale(0.68) translate(0.28, 0.14)
 
   0F74..0F75:
     font: noto-tibetan
     combining: true
     transform: scale(0.8) translate(0.15, -0.1)
 
-  0F76..0F79:
-    svg: true
+  0F76:
+    font: noto-tibetan
     combining: true
+    transform: scale(0.66) translate(0.24, 0.14)
+
+  0F77:
+    font: noto-tibetan
+    combining: true
+    transform: scale(0.55) translate(0.25, 0.11)
+
+  0F78:
+    font: noto-tibetan
+    combining: true
+    transform: scale(0.62) translate(0.28, 0.15)
+
+  0F79:
+    font: noto-tibetan
+    combining: true
+    transform: scale(0.45) translate(0.27, 0.12)
 
   0F7A..0F7E:
     font: noto-tibetan
@@ -301,8 +256,9 @@
     transform: scale(0.8) translate(0.2, 0.25)
 
   0F81:
-    svg: true
+    font: noto-tibetan
     combining: true
+    transform: scale(0.65) translate(0.25, 0.15)
 
   0F82..0F83:
     font: noto-tibetan

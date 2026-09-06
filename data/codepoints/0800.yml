@@ -41,9 +41,9 @@
   085C..085D: notdef
   085F: notdef
 
-# Syriac Extensions
+# Syriac Supplement
 
-0860..087F:
+0860..086F:
   svg: true
   transform: scale(0.8)
 
@@ -57,11 +57,91 @@
   0867:
     svg: true
 
-  086B..087F: notdef
+  086B..086F: notdef
 
-# empty
+# Arabic Extended-B
 
-0870..08FF: notdef
+0870..089F:
+  font: notoArabic
+  transform: scale(0.85) translate(0, 0.08)
+
+  0883:
+    font: notoArabic
+    transform: scale(0.85) translate(0, -0.25)
+
+  0884:
+    font: notoArabic
+    transform: scale(0.85) translate(0, -0.28)
+
+  0885:
+    font: notoArabic
+    transform: scale(0.85) translate(0, -0.39)
+
+  0886:
+    font: notoArabic
+    transform: scale(0.85) translate(0.04, -0.27)
+
+  0887:
+    font: notoArabic
+    transform: scale(0.85) translate(0, -0.2)
+
+  0888:
+    font: notoArabic
+    transform: scale(0.85) translate(0, 0.02)
+
+  088E:
+    font: notoArabic
+    transform: scale(0.85) translate(-0.04, -0.38)
+
+  # U+088F is a Unicode 17.0 addition.
+  088F: notdef
+
+  0890..0891:
+    font: notoArabic
+    transform: scale(0.45) translate(0, 0.63)
+    box: true
+
+  0892..0896: notdef
+
+  0897:
+    font: scheherazade-New
+    combining: true
+    transform: translate(0.01, 0.25)
+
+  0898:
+    font: notoArabic
+    combining: true
+    transform: scale(0.71) translate(-0.37, 0.51)
+
+  0899:
+    font: notoArabic
+    combining: true
+    transform: scale(0.68) translate(-0.39, -0.15)
+
+  089A:
+    font: notoArabic
+    combining: true
+    transform: scale(0.89) translate(-0.31, -0.19)
+
+  089B:
+    font: notoArabic
+    combining: true
+    transform: scale(0.6) translate(-0.44, -0.09)
+
+  089C:
+    font: notoArabic
+    combining: true
+    transform: translate(-0.13, 0.18)
+
+  089D:
+    font: notoArabic
+    combining: true
+    transform: translate(-0.17, 0.28)
+
+  089E..089F:
+    font: notoArabic
+    combining: true
+    transform: translate(-0.13, 0.22)
 
 # Arabic Extended-A
 
@@ -69,12 +149,44 @@
   font: noto-arabic
   transform: translate(0, -0.2)
 
-  08B5: notdef
-
   08B8:
-    svg: true
+    font: noto-arabic
+    transform: scale(0.78) translate(-0.01, -0.12)
 
-  08BE..08D2: notdef
+  08CA:
+    font: noto-arabic
+    combining: true
+    transform: translate(-0.1, 0.27)
+
+  08CB:
+    font: noto-arabic
+    combining: true
+    transform: translate(-0.13, 0.17)
+
+  08CC:
+    font: noto-arabic
+    combining: true
+    transform: translate(-0.15, 0.53)
+
+  08CD..08CE:
+    font: noto-arabic
+    combining: true
+    transform: translate(-0.11, 0.27)
+
+  08CF:
+    font: noto-arabic
+    combining: true
+    transform: translate(-0.11, -0.2)
+
+  08D0:
+    font: noto-arabic
+    combining: true
+    transform: translate(-0.07, -0.17)
+
+  08D1..08D2:
+    font: noto-arabic
+    combining: true
+    transform: translate(-0.11, -0.2)
 
   # Arabic text used:
   # 08D4: الرب
@@ -86,16 +198,15 @@
   # 08DE: قف
   # 08DF: وقفة
 
-  08D3: # Early mapping
-    early: true
+  08D3:
     font: noto-arabic
-    codepoint: 0x06E5
     combining: true
-    transform: translate(0, 0.05)
+    transform: translate(-0.08, -0.2)
 
   08D4:
-    svg: true
+    font: noto-arabic
     combining: true
+    transform: scale(0.92) translate(-0.31, 0.54)
 
   08D5:
     font: scheherazade-Bold
@@ -115,9 +226,45 @@
     combining: true
     transform: scale(0.45) translate(0, -0.9)
 
-  08D8..08DF:
-    svg: true
+  08D8:
+    font: noto-arabic
     combining: true
+    transform: scale(0.83) translate(-0.1, 0.18)
+
+  08D9:
+    font: noto-arabic
+    combining: true
+    transform: scale(0.83) translate(-0.1, -0.15)
+
+  08DA:
+    font: noto-arabic
+    combining: true
+    transform: scale(0.9) translate(-0.35, 0.51)
+
+  08DB:
+    font: noto-arabic
+    combining: true
+    transform: scale(0.92) translate(-0.51, 0.47)
+
+  08DC:
+    font: noto-arabic
+    combining: true
+    transform: scale(0.98) translate(-0.44, 0.53)
+
+  08DD:
+    font: noto-arabic
+    combining: true
+    transform: scale(0.93) translate(-0.36, 0.5)
+
+  08DE:
+    font: noto-arabic
+    combining: true
+    transform: scale(0.97) translate(-0.23, 0.51)
+
+  08DF:
+    font: noto-arabic
+    combining: true
+    transform: scale(0.77) translate(-0.32, 0.43)
 
   08E0:
     font: scheherazade-Bold
@@ -132,9 +279,9 @@
     transform: scale(0.6) translate(0, -0.7)
 
   08E2:
-    svg: true
+    font: noto-arabic
     box: true
-    transform: scale(0.8)
+    transform: scale(0.7) translate(0, 0.36)
 
   08E3:
     font: noto-arabic
@@ -397,15 +544,17 @@
 
   09E4..09E5: notdef
 
-  09FC..09FD:
-    svg: true
-    transform: scale(0.8)
+  09FC:
+    font: noto-bengali
+    transform: scale(0.98) translate(0, -0.08)
+
+  09FD:
+    font: noto-bengali
+    transform: scale(0.73) translate(0, 0.09)
 
   09FE:
-    early: true
-    combining: true
     font: noto-bengali
-    codepoint: 0x09BD
-    transform: translate(0, -0.3) scale(0.5)
+    combining: true
+    transform: scale(0.75) translate(0.01, 0.36)
 
   09FF: notdef

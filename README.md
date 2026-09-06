@@ -8,12 +8,10 @@ A bunch of Unicode characters in a poster, on a [Hilbert curve](https://en.wikip
 
 ![](https://i.imgur.com/cEVN9VR.jpg)
 
-## 🆕 New in Ver3.0.0
+## 🆕 New in Ver4.0.1
 
-* Full [Unicode 10.0.0](http://unicode.org/versions/Unicode10.0.0/) support
-* Pipeline table characters as of [UTC #152](http://www.unicode.org/L2/L2017/17222.htm) full support
-* 66 new glyphs added
-* Fonts were updated. Especially in Kanji, we now uses [Noto Serif CJK](https://www.google.com/get/noto/help/cjk/).
+* [Unicode 16.0.0](https://www.unicode.org/versions/Unicode16.0.0/) support, except U+1B7F BALINESE PANTI BAWAK
+* 245 new glyphs added
 
 ## ❓ About
 
@@ -74,11 +72,6 @@ The files not in the `data/glyphs` subdirectory are also licensed under [MIT Lic
 
 <details>
 
-* ArmenianEternity.svg
-	* link: https://commons.wikimedia.org/wiki/File:ArmenianEternity.svg
-	* author: AnonMoos
-	* license: Public Domain
-	* for: u058d.svg
 * SYRIAC-LETTER-MALAYALAM-NGA.png
 	* link: https://en.wikipedia.org/wiki/File:SYRIAC-LETTER-MALAYALAM-NGA.png
 	* author: Raamesh
@@ -134,11 +127,6 @@ The files not in the `data/glyphs` subdirectory are also licensed under [MIT Lic
 	* author: Raamesh
 	* license: CC BY-SA 4.0
 	* for: u086A.svg
-* Астрологічні цифри сингальського письма. Sinhalese astrological numerals (Sinhala Lith Illakkam).png
-	* link: https://commons.wikimedia.org/wiki/File:%D0%90%D1%81%D1%82%D1%80%D0%BE%D0%BB%D0%BE%D0%B3%D1%96%D1%87%D0%BD%D1%96_%D1%86%D0%B8%D1%84%D1%80%D0%B8_%D1%81%D0%B8%D0%BD%D0%B3%D0%B0%D0%BB%D1%8C%D1%81%D1%8C%D0%BA%D0%BE%D0%B3%D0%BE_%D0%BF%D0%B8%D1%81%D1%8C%D0%BC%D0%B0._Sinhalese_astrological_numerals_(Sinhala_Lith_Illakkam).png
-	* author: 00 وديع
-	* license: CC0 1.0
-	* for: u0de6.svg .. u0def.svg
 * Open Sans
 	* link: https://fonts.google.com/specimen/Open+Sans
 	* author: Steve Matteson and Google Corporation

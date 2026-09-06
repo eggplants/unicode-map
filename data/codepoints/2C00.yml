@@ -12,13 +12,17 @@
     font: quivira
     transform: scale(0.7, 0.8)
 
-  2C2F: notdef
+  2C2F:
+    font: nishiki
+    transform: scale(0.8)
 
   2C30..2C5F:
     font: quivira
     transform: translate(0, -0.1)
 
-    2C5F: notdef
+    2C5F:
+      font: nishiki
+      transform: translate(0, -0.1)
 
 # Latin Extended-C
 

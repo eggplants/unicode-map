@@ -294,7 +294,17 @@
   font: noto-runic
   transform: scale(0.8)
 
-  16F1..16F8:
+  16F1:
+    font: noto-runic
+    16F2:
+      font: noto-runic
+      codepoint: 0x16CB
+    16F7:
+      font: noto-runic
+      codepoint: 0x16B4
+    transform: scale(0.72) translate(-0.05, 0.02)
+
+  16F2:
     svg: true
 
     16F2:
@@ -307,6 +317,69 @@
       codepoint: 0x16B4
       transform: scale(0.8, -0.8)
 
+  16F3:
+    font: noto-runic
+    16F2:
+      font: noto-runic
+      codepoint: 0x16CB
+    16F7:
+      font: noto-runic
+      codepoint: 0x16B4
+    transform: scale(0.8) translate(0, 0.02)
+
+  16F4:
+    font: noto-runic
+    16F2:
+      font: noto-runic
+      codepoint: 0x16CB
+    16F7:
+      font: noto-runic
+      codepoint: 0x16B4
+    transform: scale(0.8) translate(0, 0.02)
+
+  16F5:
+    font: noto-runic
+    16F2:
+      font: noto-runic
+      codepoint: 0x16CB
+    16F7:
+      font: noto-runic
+      codepoint: 0x16B4
+    transform: scale(0.8) translate(0, 0.02)
+
+  16F6:
+    font: noto-runic
+    16F2:
+      font: noto-runic
+      codepoint: 0x16CB
+    16F7:
+      font: noto-runic
+      codepoint: 0x16B4
+    transform: scale(0.8) translate(0.01, 0.02)
+
+  16F7:
+    svg: true
+
+    16F2:
+      font: noto-runic
+      codepoint: 0x16CB
+      transform: scale(-0.8, 0.8)
+
+    16F7:
+      font: noto-runic
+      codepoint: 0x16B4
+      transform: scale(0.8, -0.8)
+
+  16F8:
+    font: noto-runic
+    16F2:
+      font: noto-runic
+      codepoint: 0x16CB
+    16F7:
+      font: noto-runic
+      codepoint: 0x16B4
+    transform: scale(0.8) translate(0.01, 0.02)
+
   16F9..16FF: notdef
 
 # Tagalog
@@ -314,8 +387,6 @@
 1700..171F:
   font: noto-tagalog
   transform: scale(0.8)
-
-  170D: notdef
 
   1712:
     font: noto-tagalog
@@ -327,7 +398,12 @@
     combining: true
     transform: scale(0.8) translate(0.25, 0)
 
-  1715..171F: notdef
+  1715:
+    font: noto-tagalog
+    combining: true
+    transform: scale(0.5) translate(0.19, 0.38)
+
+  1716..171E: notdef
 
 # Hanunoo
 
@@ -415,18 +491,35 @@
     combining: true
     transform: scale(0.75) translate(0.2, -0.1)
 
-  17BE..17C0:
-    svg: true
+  17BE:
+    font: noto-khmer
     combining: true
+    transform: scale(0.62) translate(-0.58, 0.13)
+
+  17BF:
+    font: noto-khmer
+    combining: true
+    transform: scale(0.53) translate(-0.04, 0.09)
+
+  17C0:
+    font: noto-khmer
+    combining: true
+    transform: scale(0.54) translate(-0.03, 0.12)
 
   17C1..17C3:
     font: noto-khmer
     combining: true
     transform: scale(0.75) translate(-0.4, 0.15)
 
-  17C4..17C5:
-    svg: true
+  17C4:
+    font: noto-khmer
     combining: true
+    transform: scale(0.57) translate(-0.02, 0.05)
+
+  17C5:
+    font: noto-khmer
+    combining: true
+    transform: scale(0.59) translate(0.04, 0.03)
 
   17C6:
     font: noto-khmer

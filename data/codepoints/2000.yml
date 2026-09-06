@@ -108,7 +108,11 @@
   20BF:
     font: notoSerif
 
-  20C0..20CF: notdef
+  20C0:
+    font: notoSerif
+
+  # U+20C1 is a Unicode 17.0 addition.
+  20C1..20CF: notdef
 
 # Combining Diacritical Marks for Symbols
 

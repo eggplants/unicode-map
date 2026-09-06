@@ -36,7 +36,11 @@
 2400..243F:
   font: quivira
 
-  2427..243F: notdef
+  2427..2429:
+    font: nishiki
+    transform: scale(0.85)
+
+  242A..243F: notdef
 
 # Optical Character Recognition
 
@@ -148,20 +152,28 @@
     transform: scale(0.7) translate(0, -0.05)
 
   2B74..2B75: notdef
-  2B96..2B97: notdef
+
+
+  # U+2B96 is a Unicode 17.0 addition.
+  2B96: notdef
+
+  2B97:
+    font: nishiki
+    transform: scale(0.85)
 
   2BBA:
-    early: true
-    font: symbola
-    codepoint: 0x29C9
-    transform: scale(0.9) translate(0, -0.05) scale(-1, 1)
+    font: nishiki
+    transform: scale(0.85)
 
-  2BBB..2BBC:
-    early: true
-    svg: true
+  2BBB:
+    font: nishiki
+    transform: scale(0.95) translate(0, 0.02)
+
+  2BBC:
+    font: nishiki
+    transform: scale(0.96) translate(0, 0.02)
 
   2BC9:
-    early: true
     font: nishiki
     transform: scale(0.85)
 
@@ -170,17 +182,14 @@
     transform: scale(0.85)
 
   # TODO: The glyph shape of U+2BD6 PLUTO FORM FIVE is questionable
-  2BD3..2BEB: # Early maping
-    early: true
+  2BD3..2BEB:
     font: nishiki
     transform: scale(0.85)
 
   2BF0..2BFE:
-    early: true
     font: nishiki
     transform: scale(0.85)
 
   2BFF:
-    early: true
     font: nishiki
     transform: scale(0.85)

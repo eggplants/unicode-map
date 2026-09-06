@@ -101,8 +101,7 @@
     combining: true
     transform: scale(0.8) translate(0.15, -0.1)
 
-  0A76: # early mapping
-    early: true
+  0A76:
     svg: true
     transform: scale(0.8)
 
@@ -205,11 +204,38 @@
   0AF2..0AF8: notdef
 
   0AF9:
-    svg: true
+    font: noto-gujarati
+    transform: scale(0.8) translate(0, -0.05)
 
-  0AFA..0AFF:
-    svg: true
+  0AFA:
+    font: noto-gujarati
     combining: true
+    transform: scale(0.95) translate(0.12, 0.12)
+
+  0AFB:
+    font: noto-gujarati
+    combining: true
+    transform: scale(0.93) translate(0.16, 0.1)
+
+  0AFC:
+    font: noto-gujarati
+    combining: true
+    transform: scale(0.93) translate(0.23, 0.13)
+
+  0AFD:
+    font: noto-gujarati
+    combining: true
+    transform: scale(0.97) translate(0.02, 0.13)
+
+  0AFE:
+    font: noto-gujarati
+    combining: true
+    transform: scale(1.06) translate(0.03, 0.16)
+
+  0AFF:
+    font: noto-gujarati
+    combining: true
+    transform: scale(1.08) translate(0.28, 0.16)
 
 # Oriya
 
@@ -291,7 +317,12 @@
     combining: true
     transform: scale(0.8) translate(0, -0.1)
 
-  0B4E..0B55: notdef
+  0B4E..0B54: notdef
+
+  0B55:
+    font: notoOriya
+    combining: true
+    transform: translate(0, 0.22)
 
   0B56..0B57:
     font: free-serif
@@ -395,9 +426,20 @@
 
   0BC9: notdef
 
-  0BCA..0BCC:
-    svg: true
+  0BCA:
+    font: noto-tamil
     combining: true
+    transform: scale(0.41) translate(-0.1, 0.01)
+
+  0BCB:
+    font: noto-tamil
+    combining: true
+    transform: scale(0.51) translate(0.01, 0.01)
+
+  0BCC:
+    font: noto-tamil
+    combining: true
+    transform: scale(0.32) translate(0.17, -0.1)
 
   0BCD:
     font: noto-tamil

@@ -105,11 +105,12 @@
   3100..3104: notdef
 
   312E:
-    svg: true
+    font: babel-stone
+    transform: scale(0.9) translate(0.02, 0.11)
 
-  312F: # Early mapping
-    early: true
-    svg: true
+  312F:
+    font: babel-stone
+    transform: scale(0.89) translate(0.01, 0.04)
 
 # Hangul Compatibility Jamo
 
@@ -139,8 +140,6 @@
   31B4..31B7:
     font: babel-stone
     transform: scale(0.9) translate(-0.25, 0.05)
-
-  31BB..31BF: notdef
 
 # CJK Strokes
 
@@ -227,7 +226,15 @@
     font: babel-stone
     transform: scale(0.9) translate(0, 0.05)
 
-  31E4..31EF: notdef
+  31E4..31E5:
+    font: babel-stone
+    transform: scale(0.9) translate(0, 0.05)
+
+  31E6..31EE: notdef
+
+  31EF:
+    font: babel-stone
+    transform: scale(0.9) translate(0, 0.05)
 
 # Katakana Phonetic Extensions
 

@@ -20,6 +20,8 @@ const NOTO_FAMILIES = [
   'NotoSansMandaic',
   'NotoSerifBengali',
   'NotoSerifGujarati',
+  'NotoSansOriya',
+  'NotoSerifSinhala',
   'NotoSerifTamil',
   'NotoSerifTelugu',
   'NotoSerifKannada',
@@ -83,6 +85,8 @@ const fonts: Record<string, string | string[]> = {
   FreeFont: 'https://ftp.gnu.org/gnu/freefont/freefont-ttf-20120503.zip',
   Hancom: 'http://cdn.hancom.com/pds/docs/HancomFont.zip',
   Scheherazade: 'http://software.sil.org/downloads/r/scheherazade/Scheherazade-2.100.zip',
+  ScheherazadeNew:
+    'https://github.com/silnrsi/font-scheherazade/releases/download/v4.300/ScheherazadeNew-4.300.zip',
   Quivira: 'http://www.quivira-font.com/files/Quivira.otf',
   UnFonts:
     'http://ftp.jaist.ac.jp/pub/Linux/Momonga/development/source/SOURCES/2607-un-fonts-core-1.0.2-080608.tar.gz',
@@ -94,7 +98,6 @@ const fonts: Record<string, string | string[]> = {
   OpenSans:
     'https://raw.githubusercontent.com/google/fonts/main/ofl/opensans/OpenSans%5Bwdth,wght%5D.ttf',
   DejaVu: 'https://sourceforge.net/projects/dejavu/files/dejavu/2.37/dejavu-fonts-ttf-2.37.zip',
-  JGLao: 'https://github.com/hakatashi/font-archive/raw/master/jglao.zip',
   NotoSerifCJKjp:
     'https://github.com/notofonts/noto-cjk/releases/download/Serif2.003/07_NotoSerifCJKjp.zip',
 };

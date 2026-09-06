@@ -8,8 +8,6 @@
     - hanamin-a
   transform: scale(0.9) translate(0, 0.05)
 
-  4DB6..4DBF: notdef
-
 # Yijing Hexagram Symbols
 
 4DC0..4DFF:
@@ -25,5 +23,3 @@
     - ipaexm
     - hanamin-a
   transform: scale(0.9) translate(0, 0.05)
-
-  9FD6..9FFF: notdef
