@@ -7,6 +7,7 @@ import Progress from 'progress';
 import type { PosterConfig } from '../configs.ts';
 import type { CodepointInfo } from './codepoint-builder.ts';
 import { fontData } from './font-data.ts';
+import type { FontUsage } from './legend/index.ts';
 import { Matrix, parseTransform } from './matrix.ts';
 import { Paper, setAttributes, setTransform, toPathData } from './svg.ts';
 import { camelCase, fromRoot, log, toHex } from './util.ts';
@@ -22,6 +23,19 @@ const CONTROL_TEXT_SIZE = 768;
 const ANCHOR_SIZE = 2;
 
 type GlyphInfo = { name: string; font: Font; glyph: Glyph };
+
+/** The chart, plus the tallies the poster's legend is written from. */
+export type Chart = {
+  svg: string;
+  /** Fonts drawn on the chart, most used first. */
+  fonts: FontUsage[];
+  statistics: {
+    codepoints: number;
+    /** Code points that carry a glyph, minus the ones Unicode has yet to encode. */
+    defined: number;
+    early: number;
+  };
+};
 
 const loadFonts = async (): Promise<Record<string, Font>> => {
   const entries = await Promise.all(
@@ -102,7 +116,7 @@ const selectGlyph = (glyphInfos: GlyphInfo[], fontNames: string[]): GlyphInfo | 
 const generateSvg = async (
   codepointInfos: Map<number, CodepointInfo>,
   config: PosterConfig,
-): Promise<string> => {
+): Promise<Chart> => {
   const [fonts, customGlyphs] = await Promise.all([loadFonts(), loadGlyphs()]);
 
   const hilbert = new Hilbert2d(HILBERT_ORDER);
@@ -312,6 +326,34 @@ const generateSvg = async (
   });
 
   const fontCountsList = Array.from(fontCounts).sort((a, b) => b[1] - a[1]);
+  /**
+   * Separate cuts of one family carry the same credit, so they are one line of
+   * the poster's font list: `FreeSerif` and `FreeSerifBold` both credit GNU
+   * FreeFont, and only their glyph counts differ.
+   */
+  const fontUsages: FontUsage[] = Array.from(
+    fontCountsList
+      .reduce((usages, [fontName, count]) => {
+        const definition = {
+          name: fontName,
+          author: 'unknown',
+          license: 'unknown',
+          ...fontData[fontName],
+        };
+        const credit = `${definition.name}\u0000${definition.author}\u0000${definition.license}`;
+        const existing = usages.get(credit);
+
+        usages.set(
+          credit,
+          existing === undefined
+            ? { ...definition, count }
+            : { ...existing, count: existing.count + count },
+        );
+
+        return usages;
+      }, new Map<string, FontUsage>())
+      .values(),
+  ).sort((a, b) => b.count - a.count);
   const fontLicenseText = fontCountsList
     .map(([fontName]) => {
       const font = fontData[fontName];
@@ -347,7 +389,16 @@ ${fontCountText}`);
   const svg = paper.serialize();
   paper.close();
 
-  return svg;
+  return {
+    svg,
+    fonts: fontUsages,
+    statistics: {
+      codepoints: CHART_SIZE * CHART_SIZE,
+      // The early mapped ones are not in the published standard yet.
+      defined: definedCharacters - earlyMappedCharacters,
+      early: earlyMappedCharacters,
+    },
+  };
 };
 
 export default generateSvg;

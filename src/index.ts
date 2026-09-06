@@ -5,6 +5,7 @@ import convertToPdf from './lib/convert-to-pdf.ts';
 import convertToPng from './lib/convert-to-png.ts';
 import downloadFonts from './lib/download-fonts.ts';
 import generateSvg from './lib/generate-svg.ts';
+import { loadLegendResources } from './lib/legend/index.ts';
 import loadCodepoints from './lib/load-codepoints.ts';
 import { log } from './lib/util.ts';
 
@@ -15,6 +16,9 @@ const main = async (): Promise<void> => {
   log('Loading codepoints...');
   const codepoints = await loadCodepoints();
 
+  log('Loading legend resources...');
+  const legendResources = await loadLegendResources();
+
   for (const config of configs) {
     const chartSvg = `${config.name}-chart.svg`;
     const posterSvg = `${config.name}-poster.svg`;
@@ -22,16 +26,16 @@ const main = async (): Promise<void> => {
     const posterPdf = `${config.name}-poster.pdf`;
 
     log(`Generating ${config.name} SVG...`);
-    const svg = await generateSvg(codepoints, config);
+    const chart = await generateSvg(codepoints, config);
 
     const [, poster] = await Promise.all([
       (async () => {
         log(`Writing ${chartSvg}...`);
-        await fs.writeFile(chartSvg, svg);
+        await fs.writeFile(chartSvg, chart.svg);
       })(),
       (async () => {
         log(`Composing ${posterSvg}...`);
-        return composePoster(svg, config);
+        return composePoster(chart, config, legendResources);
       })(),
     ]);
 

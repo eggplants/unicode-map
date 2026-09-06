@@ -67,6 +67,15 @@ mise run test
 mise run dev
 ```
 
+The poster's `Code Blocks` section is set from `data/blocks.txt`, a copy of the
+Unicode Character Database's `Blocks.txt`. Refresh it alongside `data/codepoints`
+when moving to a new Unicode version, and update `UNICODE_VERSION` in
+`src/configs.ts`:
+
+```bash
+curl -o data/blocks.txt https://www.unicode.org/Public/17.0.0/ucd/Blocks.txt
+```
+
 ## 🔰 License
 
 The overall repository is licensed under [GPLv3](https://www.gnu.org/licenses/gpl-3.0.txt) by [hakatashi].
@@ -80,8 +89,16 @@ The code added in this fork is copyright [eggplants], under the same terms.
 
 ## 🙏 Materials
 
+The poster's `Other Materials` section is generated from this list; it lives in
+`src/lib/material-data.ts`.
+
 <details>
 
+* ArmenianEternity.svg
+	* link: https://commons.wikimedia.org/wiki/File:ArmenianEternity.svg
+	* author: AnonMoos
+	* license: Public Domain
+	* for: u0588.svg
 * SYRIAC-LETTER-MALAYALAM-NGA.png
 	* link: https://en.wikipedia.org/wiki/File:SYRIAC-LETTER-MALAYALAM-NGA.png
 	* author: Raamesh
@@ -152,5 +169,17 @@ The code added in this fork is copyright [eggplants], under the same terms.
 	* author: Natanael Gama
 	* license: SIL OFL 1.1
 	* for: Poster Design
+* Inconsolata
+	* link: https://fonts.google.com/specimen/Inconsolata
+	* author: Raph Levien
+	* license: SIL OFL 1.1
+	* for: Poster Design
+* Swirl Floral Decorative Elements Vector Graphic Set
+	* author: webdesignhot.com
+	* license: CC BY 3.0
+	* for: Poster Design
+* Астрологiчнi цифри сингальського письма. Sinhalese astrological numerals (Sinhala Lith Illakkam).png
+	* author: 00
+	* license: CC0 1.0
 
 </details>

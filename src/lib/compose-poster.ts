@@ -1,5 +1,9 @@
 import fs from 'node:fs/promises';
+import { CODEPOINTS_PER_CHART, POSTER_CREDIT, UNICODE_VERSION } from '../configs.ts';
 import type { PosterConfig } from '../configs.ts';
+import type { Chart } from './generate-svg.ts';
+import renderLegend from './legend/index.ts';
+import type { LegendResources } from './legend/index.ts';
 import { Paper, setTransform } from './svg.ts';
 import { fromRoot } from './util.ts';
 
@@ -26,7 +30,11 @@ const readLayout = async (layout: string): Promise<string> => {
   return source;
 };
 
-const composePoster = async (chartSvg: string, config: PosterConfig): Promise<string> => {
+const composePoster = async (
+  chart: Chart,
+  config: PosterConfig,
+  resources: LegendResources,
+): Promise<string> => {
   const posterSvg = await readLayout(config.layout);
 
   const paper = new Paper(POSTER_WIDTH, POSTER_HEIGHT);
@@ -34,16 +42,34 @@ const composePoster = async (chartSvg: string, config: PosterConfig): Promise<st
   const rootGroup = paper.group();
   setTransform(rootGroup, `scale(${300 / 72})`);
 
-  const chart = paper.group();
-  rootGroup.append(chart);
+  const chartGroup = paper.group();
+  rootGroup.append(chartGroup);
 
   const poster = paper.group();
   rootGroup.append(poster);
 
-  chart.append(...paper.parse(chartSvg));
+  chartGroup.append(...paper.parse(chart.svg));
+
   poster.append(...paper.parse(posterSvg));
 
-  setTransform(chart, `translate(${config.chart.x}, ${config.chart.y}) scale(${CHART_SCALE})`);
+  if (config.legend !== undefined) {
+    poster.append(
+      renderLegend(
+        paper,
+        config.legend,
+        {
+          codepoint: config.codepoint,
+          codepointCount: CODEPOINTS_PER_CHART,
+          credit: POSTER_CREDIT,
+          fonts: chart.fonts,
+          statistics: { ...chart.statistics, unicodeVersion: UNICODE_VERSION },
+        },
+        resources,
+      ),
+    );
+  }
+
+  setTransform(chartGroup, `translate(${config.chart.x}, ${config.chart.y}) scale(${CHART_SCALE})`);
 
   const svg = paper.serialize();
   paper.close();

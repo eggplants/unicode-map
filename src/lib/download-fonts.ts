@@ -100,6 +100,9 @@ const fonts: Record<string, string | string[]> = {
   DejaVu: 'https://sourceforge.net/projects/dejavu/files/dejavu/2.37/dejavu-fonts-ttf-2.37.zip',
   NotoSerifCJKjp:
     'https://github.com/notofonts/noto-cjk/releases/download/Serif2.003/07_NotoSerifCJKjp.zip',
+  // The layout's own typography, for the legend sections composed on top of it.
+  LinuxLibertine:
+    'https://sourceforge.net/projects/linuxlibertine/files/linuxlibertine/5.3.0/LinLibertineTTF_5.3.0_2012_07_02.tgz/download',
   // Last resort for characters no other font has caught up with yet.
   Unifont: 'https://unifoundry.com/pub/unifont/unifont-17.0.05/font-builds/unifont-17.0.05.otf',
 };

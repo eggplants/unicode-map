@@ -36,6 +36,7 @@ node_modules
 fonts
 !data/glyphs/*.svg
 !data/layouts/*.svg
+!data/blocks.txt
 
 # =========================
 # Operating System Files

@@ -19,6 +19,8 @@ declare module 'opentype.js' {
   }
 
   export class Glyph {
+    /** `0` is `.notdef`, which is what a font without the character returns. */
+    index: number;
     unicode?: number;
     advanceWidth: number;
     getPath(x?: number, y?: number, fontSize?: number): Path;
@@ -33,6 +35,7 @@ declare module 'opentype.js' {
     variation: VariationManager;
     charToGlyph(character: string): Glyph;
     stringToGlyphs(text: string): Glyph[];
+    getKerningValue(left: Glyph, right: Glyph): number;
     getPath(text: string, x?: number, y?: number, fontSize?: number): Path;
   }
 
