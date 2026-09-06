@@ -7,7 +7,7 @@ A bunch of Unicode characters in a poster, on a [Hilbert curve](https://en.wikip
 
 ![](https://i.imgur.com/cEVN9VR.jpg)
 
-## 🆕 New in Ver4.0.1
+## 🆕 New in V4
 
 * Full [Unicode 17.0.0](https://www.unicode.org/versions/Unicode17.0.0/) support
 
