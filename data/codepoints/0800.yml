@@ -93,8 +93,9 @@
     font: notoArabic
     transform: scale(0.85) translate(-0.04, -0.38)
 
-  # U+088F is a Unicode 17.0 addition.
-  088F: notdef
+  088F:
+    font: unifont
+    transform: scale(1.16) translate(0, 0.01)
 
   0890..0891:
     font: notoArabic

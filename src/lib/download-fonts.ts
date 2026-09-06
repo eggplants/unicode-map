@@ -100,6 +100,8 @@ const fonts: Record<string, string | string[]> = {
   DejaVu: 'https://sourceforge.net/projects/dejavu/files/dejavu/2.37/dejavu-fonts-ttf-2.37.zip',
   NotoSerifCJKjp:
     'https://github.com/notofonts/noto-cjk/releases/download/Serif2.003/07_NotoSerifCJKjp.zip',
+  // Last resort for characters no other font has caught up with yet.
+  Unifont: 'https://unifoundry.com/pub/unifont/unifont-17.0.05/font-builds/unifont-17.0.05.otf',
 };
 
 /** Fonts distributed as a bare font file instead of an archive. */

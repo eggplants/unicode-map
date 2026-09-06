@@ -120,40 +120,15 @@ A720..A7FF:
     codepoint: 0x03C9
     transform: scale(0.8)
 
-  A7B8..A7CD:
+  A7B8..A7DC:
     font:
       - noto-serif
       - nishiki
     transform: scale(0.8)
 
-  # U+A7CE..A7CF, U+A7D2, U+A7D4 and U+A7F1 are Unicode 17.0 additions.
-  A7CE..A7CF: notdef
+  A7DD..A7F0: notdef
 
-  A7D0..A7D1:
-    font:
-      - noto-serif
-      - nishiki
-    transform: scale(0.8)
-
-  A7D2: notdef
-
-  A7D3:
-    font:
-      - noto-serif
-      - nishiki
-    transform: scale(0.8)
-
-  A7D4: notdef
-
-  A7D5..A7DC:
-    font:
-      - noto-serif
-      - nishiki
-    transform: scale(0.8)
-
-  A7DD..A7F1: notdef
-
-  A7F2..A7F6:
+  A7F1..A7F6:
     font:
       - noto-serif
       - nishiki

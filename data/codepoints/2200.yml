@@ -154,10 +154,7 @@
   2B74..2B75: notdef
 
 
-  # U+2B96 is a Unicode 17.0 addition.
-  2B96: notdef
-
-  2B97:
+  2B96..2B97:
     font: nishiki
     transform: scale(0.85)
 

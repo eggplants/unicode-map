@@ -243,6 +243,18 @@ export const fontData: Record<string, FontDefinition> = {
   scheherazadeBold: {
     path: 'Scheherazade/Scheherazade-2.100/Scheherazade-Bold.ttf',
   },
+  /**
+   * Outlines traced from a 16x16 bitmap, so it reads as pixel art next to the
+   * other fonts. Only used where nothing else covers the character at all.
+   */
+  unifont: {
+    name: 'GNU Unifont 17.0.05',
+    URL: 'https://unifoundry.com/unifont/',
+    author: 'Roman Czyborra, Paul Hardy and contributors',
+    license: 'GPLv2+FE',
+    licenseURL: 'https://unifoundry.com/LICENSE.txt',
+    path: 'Unifont/unifont-17.0.05.otf',
+  },
   scheherazadeNew: {
     name: 'Scheherazade New 4.300',
     URL: 'https://software.sil.org/scheherazade/',

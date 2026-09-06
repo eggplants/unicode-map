@@ -10,8 +10,7 @@ A bunch of Unicode characters in a poster, on a [Hilbert curve](https://en.wikip
 
 ## 🆕 New in Ver4.0.1
 
-* [Unicode 16.0.0](https://www.unicode.org/versions/Unicode16.0.0/) support, except U+1B7F BALINESE PANTI BAWAK
-* 245 new glyphs added
+* Full [Unicode 17.0.0](https://www.unicode.org/versions/Unicode17.0.0/) support
 
 ## ❓ About
 

@@ -251,8 +251,128 @@
     combining: true
     transform: translate(0.29, 0.13)
 
-  # U+1ACF..1AEB are Unicode 17.0 additions.
-  1ACF..1AFF: notdef
+  1ACF:
+    font: nishiki
+    combining: true
+    transform: scale(0.8) translate(0.29, 0.05)
+
+  1AD0:
+    font: nishiki
+    combining: true
+    transform: translate(0.24, 0.18)
+
+  1AD1:
+    font: nishiki
+    combining: true
+    transform: translate(0.33, 0.18)
+
+  1AD2:
+    font: nishiki
+    combining: true
+    transform: translate(0.25, 0.18)
+
+  1AD3:
+    font: nishiki
+    combining: true
+    transform: translate(0.33, 0.18)
+
+  1AD4:
+    font: nishiki
+    combining: true
+    transform: translate(0.27, 0.18)
+
+  1AD5:
+    font: nishiki
+    combining: true
+    transform: translate(0.3, 0.18)
+
+  1AD6..1AD7:
+    font: nishiki
+    combining: true
+    transform: translate(0.26, 0.17)
+
+  1AD8:
+    font: nishiki
+    combining: true
+    transform: translate(0.28, 0.16)
+
+  1AD9:
+    font: nishiki
+    combining: true
+    transform: scale(0.86) translate(0.29, 0.09)
+
+  1ADA:
+    font: nishiki
+    combining: true
+    transform: scale(0.88) translate(0.29, 0.1)
+
+  1ADB..1ADC:
+    font: nishiki
+    combining: true
+    transform: translate(0.29, 0.11)
+
+  1ADD:
+    font: nishiki
+    combining: true
+    transform: translate(0.3, -0.15)
+
+  1AE0:
+    font: nishiki
+    combining: true
+    transform: translate(0.3, 0.12)
+
+  1AE1:
+    font: nishiki
+    combining: true
+    transform: translate(0.29, 0.12)
+
+  1AE2:
+    font: nishiki
+    combining: true
+    transform: translate(0.3, 0.12)
+
+  1AE3:
+    font: nishiki
+    combining: true
+    transform: translate(0.29, 0.12)
+
+  1AE4:
+    font: nishiki
+    combining: true
+    transform: translate(0.29, 0.13)
+
+  1AE5:
+    font: nishiki
+    combining: true
+    transform: translate(0.3, 0.11)
+
+  1AE6:
+    font: nishiki
+    combining: true
+    transform: translate(0.3, -0.15)
+
+  1AE7..1AE8:
+    font: nishiki
+    combining: true
+    transform: translate(0.29, 0.12)
+
+  1AE9:
+    font: nishiki
+    combining: true
+    transform: translate(0.3, 0.13)
+
+  1AEA:
+    font: nishiki
+    combining: true
+    transform: translate(0.3, 0.14)
+
+  1AEB:
+    font: nishiki
+    combining: true
+    transform: scale(0.45) translate(-0.01, -0.18)
+
+  1ADE..1ADF: notdef
+  1AEC..1AFF: notdef
 
 # Balinese
 # Consider using Aksara Bali instead of Noto
@@ -386,8 +506,9 @@
     font: noto-balinese
     transform: scale(0.25) translate(0.05, -0.47)
 
-  # No available font carries U+1B7F BALINESE PANTI BAWAK.
-  1B7F: notdef
+  1B7F:
+    font: unifont
+    transform: scale(1.4) translate(0.03, 0.1)
 
 # Sundanese
 

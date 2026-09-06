@@ -96,8 +96,11 @@
     font: noto-telugu
     transform: scale(0.8) translate(0, -0.03)
 
-  # U+0C5C is a Unicode 17.0 addition.
-  0C5B..0C5C: notdef
+  0C5B: notdef
+
+  0C5C:
+    font: unifont
+    transform: scale(0.98) translate(-0.03, 0.04)
 
   0C5E..0C5F: notdef
 
@@ -238,8 +241,11 @@
     combining: true
     transform: scale(0.75) translate(0.5, -0.4)
 
-  # U+0CDC is a Unicode 17.0 addition.
-  0CD7..0CDC: notdef
+  0CD7..0CDB: notdef
+
+  0CDC:
+    font: unifont
+    transform: scale(0.98) translate(-0.03, 0.04)
   0CDF: notdef
 
   0CE0:
