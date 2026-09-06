@@ -5,6 +5,13 @@ A bunch of Unicode characters in a poster, on a [Hilbert curve](https://en.wikip
 [ci-image]: https://github.com/eggplants/unicode-map/actions/workflows/ci.yml/badge.svg
 [ci-url]: https://github.com/eggplants/unicode-map/actions/workflows/ci.yml
 
+> [!NOTE]
+> This repository is a fork of [hakatashi/unicode-map](https://github.com/hakatashi/unicode-map). The following changes have mainly been added since [v3.0.0 (201804190817)](https://github.com/hakatashi/unicode-map/releases/tag/201804190817):
+>
+> - Unicode [17.0.0](https://www.unicode.org/versions/Unicode17.0.0/) Support
+> - BMP-3 (U+8000 - U+BFFF) poster
+> - Migration from LiveScript to TypeScript
+
 ## ⏬ Download
 
 Latest preview is live at: <https://egpl.dev/unicode-map/>
@@ -36,22 +43,9 @@ Latest preview is live at: <https://egpl.dev/unicode-map/>
 
 </details>
 
-## 🆕 New in V4
-
-* Full [Unicode 17.0.0](https://www.unicode.org/versions/Unicode17.0.0/) support
-
 ## ❓ About
 
 **The Unicode Map Project** (Japanese: Unicode巨大地図) is an experimental project to illustrate [Unicode](http://unicode.org/standard/WhatIsUnicode.html) characters (and non-characters) in a large poster, and sell them at some [dōjinshi](https://en.wikipedia.org/wiki/D%C5%8Djinshi) fair event such as [Comiket](https://en.wikipedia.org/wiki/Comiket) in Japan. The version 1.0.0 was [sold at Comiket 91](https://webcatalog-free.circle.ms/Circle/13007447), held on Dec 29, 2016. Its composition of Unicode characters is very featured by its arrangement, which introduces a [Hilbert curve](https://en.wikipedia.org/wiki/Hilbert_curve) to visually span [the blocks of Unicode](https://en.wikipedia.org/wiki/Unicode_block).
-
-The poster is developed with open source and the poster data [can be downloaded](#download) for free. And also any contribution is welcomed!
-
-> [!NOTE]
-> This repository is a fork of [hakatashi/unicode-map](https://github.com/hakatashi/unicode-map). The following changes have mainly been added since [v3.0.0 (201804190817)](https://github.com/hakatashi/unicode-map/releases/tag/201804190817):
->
-> - Unicode [17.0.0](https://www.unicode.org/versions/Unicode17.0.0/) Support
-> - BMP-3 (U+8000 - U+BFFF) poster
-> - Migration from LiveScript to TypeScript
 
 ## 💪 Build
 
