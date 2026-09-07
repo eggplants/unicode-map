@@ -2,19 +2,12 @@
 
 A bunch of Unicode characters in a poster, on a [Hilbert curve](https://en.wikipedia.org/wiki/Hilbert_curve).
 
-[ci-image]: https://github.com/eggplants/unicode-map/actions/workflows/ci.yml/badge.svg
-[ci-url]: https://github.com/eggplants/unicode-map/actions/workflows/ci.yml
-
-> [!NOTE]
-> This repository is a fork of [hakatashi/unicode-map](https://github.com/hakatashi/unicode-map). The following changes have mainly been added since [v3.0.0 (201804190817)](https://github.com/hakatashi/unicode-map/releases/tag/201804190817):
->
-> - Unicode [17.0.0](https://www.unicode.org/versions/Unicode17.0.0/) Support
-> - BMP-3 (U+8000 - U+BFFF) poster
-> - Migration from LiveScript to TypeScript
+[ci-image]: https://github.com/hakatashi/unicode-map/actions/workflows/ci.yml/badge.svg
+[ci-url]: https://github.com/hakatashi/unicode-map/actions/workflows/ci.yml
 
 ## ⏬ Download
 
-Latest preview is live at: <https://egpl.dev/unicode-map/>
+Latest preview is live at: <https://hakatashi.github.io/unicode-map/>
 
 <details>
 
@@ -23,21 +16,21 @@ Latest preview is live at: <https://egpl.dev/unicode-map/>
 
 ### BMP-1 (U+0000 - U+3FFF) v4.0.3
 
-* [SVG (29.6 MB)](https://github.com/eggplants/unicode-map/releases/download/v4.0.3/bmp-1-poster.svg)
-* [PNG (17.2 MB)](https://github.com/eggplants/unicode-map/releases/download/v4.0.3/bmp-1-poster.png)
-* [PDF (11.3 MB)](https://github.com/eggplants/unicode-map/releases/download/v4.0.3/bmp-1-poster.pdf)
+* [SVG (29.6 MB)](https://github.com/hakatashi/unicode-map/releases/download/v4.0.3/bmp-1-poster.svg)
+* [PNG (17.2 MB)](https://github.com/hakatashi/unicode-map/releases/download/v4.0.3/bmp-1-poster.png)
+* [PDF (11.3 MB)](https://github.com/hakatashi/unicode-map/releases/download/v4.0.3/bmp-1-poster.pdf)
 
 ### BMP-2 (U+4000 - U+7FFF) v4.0.3
 
-* [SVG (36.6 MB)](https://github.com/eggplants/unicode-map/releases/download/v4.0.3/bmp-2-poster.svg)
-* [PNG (24.6 MB)](https://github.com/eggplants/unicode-map/releases/download/v4.0.3/bmp-2-poster.png)
-* [PDF (15.2 MB)](https://github.com/eggplants/unicode-map/releases/download/v4.0.3/bmp-2-poster.pdf)
+* [SVG (36.6 MB)](https://github.com/hakatashi/unicode-map/releases/download/v4.0.3/bmp-2-poster.svg)
+* [PNG (24.6 MB)](https://github.com/hakatashi/unicode-map/releases/download/v4.0.3/bmp-2-poster.png)
+* [PDF (15.2 MB)](https://github.com/hakatashi/unicode-map/releases/download/v4.0.3/bmp-2-poster.pdf)
 
 ### BMP-3 (U+8000 - U+BFFF) v4.0.3
 
-* [SVG (38.5 MB)](https://github.com/eggplants/unicode-map/releases/download/v4.0.3/bmp-3-poster.svg)
-* [PNG (21.2 MB)](https://github.com/eggplants/unicode-map/releases/download/v4.0.3/bmp-3-poster.png)
-* [PDF (14.2 MB)](https://github.com/eggplants/unicode-map/releases/download/v4.0.3/bmp-3-poster.pdf)
+* [SVG (38.5 MB)](https://github.com/hakatashi/unicode-map/releases/download/v4.0.3/bmp-3-poster.svg)
+* [PNG (21.2 MB)](https://github.com/hakatashi/unicode-map/releases/download/v4.0.3/bmp-3-poster.png)
+* [PDF (14.2 MB)](https://github.com/hakatashi/unicode-map/releases/download/v4.0.3/bmp-3-poster.pdf)
 
 <!-- downloads:end -->
 
@@ -76,7 +69,7 @@ The overall repository is licensed under [GPLv3](https://www.gnu.org/licenses/gp
 
 The files not in the `data/glyphs` subdirectory are also licensed under [MIT License](https://opensource.org/licenses/MIT) by [hakatashi].
 
-The code added in this fork is copyright [eggplants], under the same terms.
+The code added in v4 is copyright [eggplants], under the same terms.
 
 [hakatashi]: <https://github.com/hakatashi>
 [eggplants]: <https://github.com/eggplants>

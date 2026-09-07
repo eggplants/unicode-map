@@ -109,7 +109,7 @@ const fonts: Record<string, string | string[]> = {
 
 /** Fonts distributed as a bare font file instead of an archive. */
 /** Some hosts reject requests that keep Node's default `node` user agent. */
-const USER_AGENT = 'unicode-map/1.0 (+https://github.com/eggplants/unicode-map)';
+const USER_AGENT = 'unicode-map/1.0 (+https://github.com/hakatashi/unicode-map)';
 
 const headersFor = (directory: string): Record<string, string> => {
   const headers: Record<string, string> = {

@@ -10,7 +10,7 @@ export const CODEPOINTS_PER_CHART = 128 * 128;
 /** The credit printed under `Credit of This Poster`, below the project name. */
 export const POSTER_CREDIT = {
   byline: 'By hakatashi (~ v3) and eggplants (v4 ~)',
-  source: 'https://github.com/eggplants/unicode-map',
+  source: 'https://github.com/hakatashi/unicode-map',
 };
 
 /**
